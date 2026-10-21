@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brosur &amp; Simulasi KUR, KUM, KPR Bank Mandiri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#fff;--navy:#0a3a60;--navy2:#0e4d7e;--gold:#feb600;--sky:#ebf3ff;--cream:#ffecbe;--mut:#55708a;--bd:#d6e3f5;--r:18px}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px);scroll-behavior:smooth}
+*,*:before,*:after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--navy);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
+a{color:inherit;text-decoration:none}
+svg.i{width:1.2em;height:1.2em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:4px solid var(--gold)}
+header:before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#fff;z-index:-1}
+.hd{max-width:1040px;margin:0 auto;padding:10px 18px;display:flex;align-items:center;gap:12px}
+.hd .d{background:var(--navy);border-radius:12px;padding:8px 12px;display:flex;box-shadow:0 4px 12px rgba(10,58,96,.25)}
+.hd img{display:block;height:32px;width:auto}.hd .m img{height:36px}
+.sp{flex:1}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:12px;padding:10px 16px;font:inherit;font-weight:700;font-size:14px;cursor:pointer;background:var(--gold);color:var(--navy);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(254,182,0,.45)}
+.btn.o{background:#fff;border:2px solid var(--navy)}.btn.o:hover{box-shadow:0 6px 16px rgba(10,58,96,.18)}
+main{max-width:1040px;margin:0 auto;padding:18px 18px 56px}
+.v{display:none}.v.on{display:block;animation:up .4s ease both}
+@keyframes up{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+nav.bc{font-size:13px;color:var(--mut);display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 16px}
+nav.bc a{font-weight:600;color:var(--navy)}nav.bc a:hover{text-decoration:underline}
+.hero{position:relative;overflow:hidden;border-radius:24px;padding:40px 28px 80px;color:#fff;background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%)}
+.hero:before{content:"";position:absolute;right:-80px;top:-90px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(254,182,0,.55),rgba(254,182,0,0) 68%)}
+.hero:after{content:"";position:absolute;left:-60px;bottom:-110px;width:300px;height:300px;border-radius:50%;border:38px solid rgba(255,255,255,.07)}
+.hero>*{position:relative;z-index:1}
+.eye{display:inline-block;background:rgba(254,182,0,.18);color:var(--gold);border:1px solid rgba(254,182,0,.5);border-radius:99px;padding:4px 14px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+h1{font-size:clamp(26px,5vw,40px);line-height:1.15;margin:14px 0 8px;font-weight:800;letter-spacing:-.02em}
+.hero p{margin:0;max-width:560px;color:#d3e4f6}
+h2{font-size:clamp(22px,4vw,30px);margin:0 0 6px;font-weight:800;letter-spacing:-.01em}
+.sub{color:var(--mut);margin:0 0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.lift{margin-top:-52px;position:relative;z-index:2}
+.opt{position:relative;display:flex;flex-direction:column;gap:10px;background:#fff;border:2px solid var(--bd);border-radius:var(--r);padding:22px;box-shadow:0 10px 28px -12px rgba(10,58,96,.25);transition:transform .2s,border-color .2s,background .2s}
+.opt:hover,.opt:focus-visible{transform:translateY(-4px);border-color:var(--gold);background:var(--cream);outline:none}
+.opt .top{display:flex;align-items:center;gap:12px}
+.rd{width:22px;height:22px;border-radius:50%;border:2px solid var(--navy);background:#fff;flex:none;transition:.2s}
+.opt:hover .rd{background:var(--gold);box-shadow:inset 0 0 0 4px #fff}
+.opt h3{margin:0;font-size:20px}.opt p{margin:0;color:var(--mut);font-size:14px}
+.ic{width:46px;height:46px;border-radius:14px;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-size:22px;flex:none}
+.rate{font-size:46px;font-weight:800;line-height:1;letter-spacing:-.03em}.rate small{font-size:15px;font-weight:700;color:var(--mut);letter-spacing:0}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.tag{background:var(--sky);color:var(--navy);border-radius:99px;padding:4px 12px;font-size:12px;font-weight:700}
+.opt:hover .tag{background:#fff}
+.go{margin-top:auto;display:flex;align-items:center;gap:6px;font-weight:700;font-size:14px}.opt:hover .go svg{transform:translateX(4px)}.go svg{transition:.2s}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:0 0 20px}
+.stat{background:var(--sky);border-radius:14px;padding:14px 16px}.stat b{display:block;font-size:20px}.stat span{font-size:12px;color:var(--mut);font-weight:600}
+.head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.badge{background:var(--gold);color:var(--navy);font-weight:800;border-radius:99px;padding:4px 14px;font-size:14px}
+.card{background:#fff;border:1px solid var(--bd);border-radius:var(--r);padding:20px;box-shadow:0 8px 24px -14px rgba(10,58,96,.3);margin-bottom:18px}
+.card.k{background:var(--cream);border-color:#f7d77f}
+.card h3{margin:0 0 12px;font-size:17px}
+.tools{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:14px}
+.srch{position:relative;flex:1;min-width:220px;max-width:340px}.srch svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--mut)}
+input[type=text],input:not([type]),select{width:100%;padding:13px 14px;border:2px solid var(--bd);border-radius:12px;background:#fff;color:var(--navy);font:inherit;font-size:16px;font-weight:600}
+.srch input{padding-left:38px;font-size:14px}
+input:focus,select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px rgba(254,182,0,.25)}
+.tw{overflow:auto;max-height:560px;border:1px solid var(--bd);border-radius:14px}
+table{width:100%;border-collapse:separate;border-spacing:0;font-variant-numeric:tabular-nums;white-space:nowrap}
+th,td{padding:11px 14px;text-align:right;font-size:14px}
+th{position:sticky;top:0;z-index:2;background:var(--navy);color:#fff;font-size:12px;letter-spacing:.05em;text-transform:uppercase}
+th:first-child,td:first-child{text-align:left;position:sticky;left:0;z-index:1}th:first-child{z-index:3}
+td:first-child{background:var(--sky);font-weight:700}
+tbody tr:nth-child(even) td:not(:first-child){background:#f6faff}
+td[data-p]{cursor:pointer;font-weight:600;transition:background .15s}td[data-p]:hover{background:var(--gold)!important}
+td.na{color:#a3b4c6;text-align:right}
+.hint{font-size:12px;color:var(--mut);margin:10px 0 0}
+.req{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px}
+.req li{display:flex;gap:10px;align-items:flex-start;background:#fff;border-radius:12px;padding:12px 14px;font-weight:600;font-size:14px}
+.req svg{background:var(--navy);color:var(--gold);border-radius:50%;padding:3px;width:22px;height:22px}
+.pic{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.av{width:52px;height:52px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-weight:800;font-size:20px}
+.pic .t{flex:1;min-width:180px}.pic .t span{display:block;font-size:12px;color:var(--mut);font-weight:600}.pic .t b{font-size:18px}
+.legal{font-size:12px;color:var(--mut);margin-top:14px}
+.sim{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:start}
+@media (max-width:820px){.sim{grid-template-columns:1fr}}
+.res{position:sticky;top:96px;background:linear-gradient(150deg,var(--navy),var(--navy2));color:#fff;border-radius:var(--r);padding:24px;overflow:hidden}
+.res:before{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(254,182,0,.45),transparent 70%)}
+.res>*{position:relative}
+.res .l{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#bcd3ea;font-weight:700}
+.big{font-size:clamp(30px,6vw,40px);font-weight:800;color:var(--gold);letter-spacing:-.02em;margin:4px 0 14px}
+.bar{display:flex;height:12px;border-radius:99px;overflow:hidden;background:rgba(255,255,255,.15)}
+.bar i{display:block;transition:width .5s ease}.b1{background:#fff}.b2{background:var(--gold)}
+.lg{display:flex;justify-content:space-between;font-size:12px;color:#d3e4f6;margin:8px 0 12px}
+.lg span:before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px}.lg .a:before{background:#fff}.lg .b:before{background:var(--gold)}
+.row{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-top:1px solid rgba(255,255,255,.15);font-size:14px}.row b{font-size:15px}
+.acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.res .btn.o{background:transparent;border-color:rgba(255,255,255,.5);color:#fff}
+lbl,label,legend{display:block;font-weight:700;font-size:13px;margin:0 0 8px;padding:0;letter-spacing:.02em}
+fieldset{border:0;margin:0 0 18px;padding:0;min-width:0}
+.fld{margin-bottom:18px}
+.pf{position:relative}.pf b{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--mut)}.pf input{padding-left:46px;font-size:20px;font-weight:800}
+.pf.pct input{padding-left:14px;padding-right:46px}.pf.pct b{left:auto;right:14px}
+.qs{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.q{border:1.5px solid var(--bd);background:var(--sky);border-radius:99px;padding:6px 13px;font:inherit;font-size:13px;font-weight:700;color:var(--navy);cursor:pointer}.q:hover{background:var(--cream);border-color:var(--gold)}
+.seg{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px}
+.seg label{margin:0;cursor:pointer}.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg span{display:block;text-align:center;padding:12px 8px;border:2px solid var(--bd);border-radius:12px;font-weight:700;font-size:14px;transition:.15s;background:#fff}
+.seg small{display:block;font-weight:500;font-size:11px;color:var(--mut)}
+.seg label:hover span{border-color:var(--gold)}
+.seg input:checked+span{background:var(--navy);border-color:var(--navy);color:#fff}.seg input:checked+span small{color:#bcd3ea}
+.seg input:focus-visible+span{box-shadow:0 0 0 4px rgba(254,182,0,.4)}
+.seg input:disabled+span{opacity:.4;cursor:not-allowed;background:var(--sky);border-style:dashed}
+.seg.two{grid-template-columns:1fr 1fr}
+.msg{font-size:13px;font-weight:600;margin-top:8px;min-height:18px;color:var(--mut)}.msg.e{color:#b00020}
+details{background:var(--sky);border-radius:14px;padding:4px 16px;margin-bottom:18px}
+summary{cursor:pointer;font-weight:700;padding:12px 0;list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary::-webkit-details-marker{display:none}summary:after{content:"＋";color:var(--navy);font-size:18px}details[open] summary:after{content:"－"}
+details .tw{margin-bottom:14px;max-height:420px;background:#fff}
+details p,details li{font-size:14px;color:#2d4d6a}details ul{padding-left:18px}
+dialog{border:0;border-radius:22px;padding:0;max-width:min(440px,92vw);width:100%;box-shadow:0 30px 80px rgba(10,58,96,.45);color:var(--navy)}
+dialog::backdrop{background:rgba(10,58,96,.55);backdrop-filter:blur(3px)}
+dialog .in{padding:22px}dialog .x{float:right;background:var(--sky);border:0;border-radius:50%;width:34px;height:34px;font-size:18px;cursor:pointer;color:var(--navy)}
+.ct{border:1px solid var(--bd);border-radius:14px;padding:14px;margin-top:12px}
+output{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:var(--navy);color:#fff;padding:12px 20px;border-radius:99px;font-weight:600;font-size:14px;opacity:0;pointer-events:none;transition:.3s;z-index:50;border:2px solid var(--gold)}
+output.on{opacity:1;transform:translate(-50%,0)}
+.fab{position:fixed;right:18px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:30;display:flex;align-items:center;gap:10px;border:0;border-radius:99px;padding:15px 22px 15px 18px;background:var(--gold);color:var(--navy);font:inherit;font-weight:800;font-size:15px;cursor:pointer;box-shadow:0 10px 28px rgba(10,58,96,.35);animation:pulse 2.4s infinite;transition:transform .2s}
+.fab svg{width:24px;height:24px}.fab:hover{transform:translateY(-3px)}
+@keyframes pulse{0%{box-shadow:0 10px 28px rgba(10,58,96,.35),0 0 0 0 rgba(254,182,0,.6)}70%{box-shadow:0 10px 28px rgba(10,58,96,.35),0 0 0 16px rgba(254,182,0,0)}100%{box-shadow:0 10px 28px rgba(10,58,96,.35),0 0 0 0 rgba(254,182,0,0)}}
+@media (max-width:520px){.fab span{display:none}.fab{padding:16px}}
+
+.kk-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}
+.kk-tabs .q{padding:8px 16px;font-size:13px}.kk-tabs .q.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.kk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.kc{display:flex;flex-direction:column;background:#fff;border:2px solid var(--bd);border-radius:var(--r);overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s}
+.kc:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 14px 30px -14px rgba(10,58,96,.35)}
+.kc .im{aspect-ratio:445/279;background:linear-gradient(135deg,var(--sky),#fff);display:grid;place-items:center;padding:14px}
+.kc .im img{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;filter:drop-shadow(0 8px 12px rgba(10,58,96,.25))}
+.kc .bd{padding:14px 16px 16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.kc h3{margin:0;font-size:16px;line-height:1.3}
+.kc .bt{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+.kc .btn{padding:8px 12px;font-size:13px;border-radius:10px}
+.kk-cat{margin:0 0 16px}.kk-cat p{margin:0;font-size:14px;color:#2d4d6a}
+.kk-empty{text-align:center;color:var(--mut);padding:32px 0;font-weight:600}
+.kk-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+[hidden]{display:none!important}
+.kpw{max-height:none}
+.kpt ul{margin:0;padding-left:18px;text-align:left}.kpt li{margin:2px 0}
+.kpt{white-space:normal}
+.kpt th,.kpt td{text-align:center;padding:10px 12px}
+.kpt th:first-child,.kpt td:first-child{position:static}
+.kpt td{font-weight:500}.kpt td:first-child{font-weight:500}
+.kpt td{background:#fff!important;border-bottom:1px solid var(--bd);border-right:1px solid var(--bd)}
+.kpt td:last-child{border-right:0}
+.kpt td.cat{background:var(--sky)!important;font-weight:800}.kpt td.cat+td.cat{font-weight:700}
+.kpt tbody tr[data-r]{cursor:pointer}
+.kpt tbody tr[data-r]:hover td:not(.cat){background:var(--cream)!important}
+.kpt tbody tr:hover td[rowspan]{background:inherit}
+.kp-sep{font-weight:600;font-size:13px;color:var(--mut)}
+.chk{display:flex;gap:10px;align-items:flex-start;font-weight:700;font-size:14px;cursor:pointer;margin:0 0 6px;letter-spacing:0}
+.chk input{width:20px;height:20px;accent-color:var(--navy);margin:1px 0 0;flex:none}
+details h4{margin:10px 0 4px;font-size:14px}
+details ol{padding-left:22px;margin:4px 0 10px;font-size:14px;color:#2d4d6a}
+select{appearance:auto}
+footer{background:var(--navy);color:#bcd3ea;text-align:center;font-size:12px;padding:22px 18px calc(22px + env(safe-area-inset-bottom,0px));border-top:4px solid var(--gold)}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="arr" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="chk" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></symbol>
+<symbol id="srch" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></symbol>
+<symbol id="tel" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+<symbol id="tbl" viewBox="0 0 24 24"><path d="M3 5h18v14H3zM3 10h18M9 5v14"/></symbol>
+<symbol id="calc" viewBox="0 0 24 24"><path d="M5 3h14v18H5zM8 7h8M8 12h1M12 12h1M16 12h0M8 16h1M12 16h1M16 16h0"/></symbol>
+<symbol id="cc" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></symbol>
+<symbol id="cp" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8"/></symbol>
+</defs></svg>
+
+<header><div class="hd">
+  <a href="#/" class="d" aria-label="Beranda"><img alt="Danantara Indonesia" src="data:image/png;base64,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"></a>
+  <a href="#/" class="m" aria-label="Bank Mandiri"><img alt="Bank Mandiri" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAB1CAYAAABgQbdJAAAQAElEQVR4Aex9CZwUxfX/e73s9CygksRIUJOIB+IRTxSSKEqi4O7Mgqhg8IoSFaO4O4sgvz+JuhpvcGd2Ec+gEo+figm4OwuCJ5548FOjeKBCNDFeMdGA7Mwu0/X/1uyCs7tzdPf0HD1b86ma6a5679Wrb1W/V0d3j0bqoxBQCCgEXIyAeJgGi2U0FnF6bBldYSyjVsRliK04v0qmi1YaLR6hIS6uZlGqrhxIUTaLUkohoBBIhwCcwSFwDBcbrfSoKKcNgmgF4nwmugR8VYiViFU4nyPTBdMqYdB6OJUXxHI6UzxJXuSrkCUCyoFkCaBiVwj0RAAGajfRSpMx+p0Hg/Uk4qqE+BSOH5F5YhlNhRHcoye/Ok+NgAjTGDiNMJzBGjiG64jpGFBXIJoJ0mmMEoLuFG30AbCfLVbQADOMiiY5AsqBJMdFpSoELCEgltPecApXwTm8DAO1HiPeBzD6vQhCjkYcnRCPwvE4mQcDuBDxffA8D/7L4HR+jDwVkiAAbE4ETs8IjZ6A0/AlIbGatDOwv1bE6H04kqlWmRV9JwLKgXTioL4VArYQgPEZC8PWDKfxNpzCHAgZgYhDfJsPPwV/PZzOO7FWasSo+IfmWUubEo71COD7LLB5CDU9AtHp8AM4koUoY7F4lHZwWnipy3OxAyn1plH1K2YEYNh+CaMj191XQM9qRKtOAyy9gpeZajAqXgdH8odeuX0oATOOYZjRLYRjfQbV/jlirsNJooPeRLnH5rqgUpKvHEgptaaqS84RwIxjlLGclsKwPYbCxiLmIkhH8ns4qBew5r9/LgooVpliCQ2C47gWM4534JHzvbS0K8pdiTa+sFjxKTa9lAMpthZR+hQlAuJJGgjD1oTljhdI0IQ8KTkKa/5vYLbz6zyVZ7qYXBCinucLnd6F45gN+fjBdwEC2rgJM5H/V4CiXVekciCuazKlcL4RgDE5T7TR+7BoBRmZCkF3YUnr+nzXO1/lieU0xWilt1HPBShzJ8SCB8xErsZMRDqyguvilALiQaoQD9Ngp+RJOcqBSBRUVAgkQQCOYwIM24uC6WZkO3rhQZ6lgL2RWVjS+oslpiInhuMYh+XA5+A47iOm4cWmLmYi10LHScWmlxl9RD1p6L+jMWu+HP3mGcTVYiCtF+X0IY7XSNxjy+kG0Uo/MSMvFY1yIKmQyWW6kl3UCOCiGgHHEYbjWArDdngRKTsRF7/rnYh8CBD1eBCO4xES9LMiwreXKtDxQcxE5EOJvfKKNQH6/lYcTu+h/67CrPlS6CnvXhuJ3x8g6oiHSNxZ0AzQ/BVOZpFYRt9HuuWgHIhlyBRDqSKA0eZuGJX9CRfVy3AcTjxrkAuoJuKCvz8XgnMtU7TQLtD9ZvkQIMpyzcheEC2TfQM6F3WAEzgVA5/XoO9NUHR3RFMBTuYM8LyLOh5miiGBSDmQBDDUYd9EQK4Nw7BdgdHm2xiVnV7sKOCCPxn6zi92PRP1g3GaJcpIPitzXmJ6AY5tFYm+8ZgtxjwwYUbnw4zuFTiBezDwOdBmkd9BHZ+ArD2t8CsHYgUtRVtyCGC56mysDctbRuU7lOSrLlxRRziR6RhxBopdWeA7GcbtHRgneRPAdsWubxr99kA9FqfJz3sWjP2R0GklZnRhFH4oYrZhIGS9KAdUZgUpB2IWKUVXUgjAsB0rNxKxXHU7KvYjRNcFjDiDcCL5eMjOMjbA1w/j9jrwfQDMeyOWQjgJeJ9a6IoA25HAthnG/mno4vSDj9/FgGoNnIgHsjMG5UAyQqQIEhFw+7F8MA8XXysM20q5kej6+hA9LFqof7HUA0tV8tUjy4BvC3Q6ALGkApz2XRj5F+S18F2OQ/bd1QC1GjFXYR84kUfNCFcOxAxKisb1CIiVtDP2DYLywTxUpgqxVML3RBktKXRlRDP9CPjeiqUq+eoRV921ZBG7fhj5N1vkyYpcvhut6+YO6Tjy1XdHY4a+PJPiyoFkQkjlux4BLDvMFlvoA+wbFP2egU2w5Z8pFeShN/EYfQ+OY67oF3/Q8lyb+ruNbQTqfFWulZYzHTiO20UM2Ao6nSjXJfaQL+g41HNej9Rup8qBdINDnZQSAnAcJ2G56lUsO1yLerlmgxy6Wg6yjlg+kq+Ot8xrhwHY6ihvlmgneQPCTMgoR+wzAYOROah/TmYD4mEaDMdxNWY677KgswGqqf0I0DkeUM+L0NbyWZKkspUDSQqLSnQzAujwo4xWCsOoyrtmDnJzXazojuWjsHiS+lnhsUMLfC8EtuuEIHln1Y52ZJQCD+rfCicy3sm6QN4sUU7ydnL5Lq6iuGsNbX052lz+t02vqioH0gsSleBWBNDJd8WU+yZ0+BeIqeeDgG6tlhW9B4g2ytnzCqKV5Ktd5INqTVDKlXeuQW9HA5zIw+h3F2cjVLTQjmI5yVfVvAt50il/Jxt5ueDFNTUP9ez1dmTlQHKBtpKZVwTEK1Qea6V6dPJ1mHL/Nq+FF19hR2HZrgUXu3xlhSPaYS3+kPiMjkm+2sXug2pUqh/0u+uA+bNwApaergf9ERjwXCnK6IMuxzGsmDFCPRdiECH/XXObmsqBbINCHbgRARjKk8Rn9C4zXQb9zf43NkhLOvhxsb8KA5XV8xciTLvDMd+Ntfg1fXRGZ6WT/BxO4EE4krXA/TJgd6jcy4DzHRKPD9Ng/B4OAzwZ+xs3gO4F0D+DAc/vUMj2iK4IgmkV6iDfqxXX17QDiVOrL4VAkSAAxzEWF+EqGMrFMG5Di0StYlJjHxioN2HMaoCVpdkIDN2e4JslNHoLjvm0YqqUC3TZF7jXA7tXRDn9Hc73o3jsPJZvdn4AG+MzUI9RiK4McCLPwkHG37WlHIgrm7DvKi1W0HBM+xfCcawACqMRVUiNQD8Ys0Zg9SEwuwpO4QCcY9Dbm0G00C5wNJWgWwSD9x7o5Fq8JcfTW2pRprSToGdgBP8IQ/5bgHFa0igoAAzuQg1eQfwG0U6Qd6bJmxpklMd2ZBQjTz84yBdFKw1TDqQYm0fp1AsBGLj+WE6pFzGSL+TrtZnXi8G9CREYuJcQ5Wb4E6jG40T0OH6f6Ep7EccxRCthMIzkHBjE1+FE1mPmthp7Gi/G4zJajfP/E2X0IRzNMtCdYUWwS2gjcBh3YzY1gfvRUM1Ho8sq6Rz20S1cRfcmjT5qLPPRWVoVHcZltDszTQY+jajvZ4gqEO1oMJ2hHIjqCkWPAEbGp8LArcNFfFnRK2tdwb/DMN2H0fAZiJUwVj+GgRuJeCyM1y8Rj+mKv+xKGwUjvxuwOAH00tjLp4W/tFDsbqAdiWW/w+ORaCTOD0YsQyy1sAnYhjhGe8JhnMGV1Mxj6Z9WK8nj6HPwLi6rogBvoqHA/kRieoT67mc9+uA4bRNdpRxI3+0ERV9zrMXL11S/ACNwD5TdBbFUQgSzgXtgiHz8Eu0Gw3QqRsN3Iz4ijVWmSnIV/QMGbQno74ZzqeIOGspEvwJfXl+xgfKKNqDP3AYHuxewreNq+tgpRXkytQH7v2iVVMkayRcZmnpnlFPlF1hODP3sUq6g/dAHV0os+oIDKTDmqnirCGCf44dYVlmMtXj5mupRVvmLmL4Dhu0GzDKGYXnkdK6kZVxPRrb68gTaiAv6ATiTCWyQ3MSVz2lkK9at/H9mQXvDcUxjH32ay0rwcfQYMB+LgYB8WvyrXJZVaNmCaBFw3Rf97A88hiJb9VEOZCsS6rfgCMBxDMA+R4Pc54AyJyGWTMAFKJep9oJhm8nj6O+5qhj76W04p1pc7HJZSr58L1dFFZvcFcw0Bgb9JDiOdflUDgOBhcB7H5Qp96fwU1LhFdStEv32zGS4KgdSUm3t3spgn2MqHMfrzFSHWgxALJXQjDodjgtQLlN9mK9K4WJ/Dcb0p0z0P/kqM2k5uU98Wi4loa7HwZA/lfvikpcAvD+FDqOwWf9gcgrXpX6CvjMTdToMdUu536MciOvatbQUFmEag+Wq1zFCX4ia7YFYGkGQdIZTcAFOgGF7uVCVwpLDdTAER6D8jYilFD6EYz4d+B4ll5KKpWLYrD8ZfVnerVUsKlnWA/tzTVxBw9B3bsjErBxIJoRUfk4QEK10EBxHi9BI3qp6QE4KKYzQv8OwXaz56CCupPupCD4wBM9h30W+giRnS2d5rOaXcIiX8U60F/CVN1fksWhzRWG2Kf824CFz1EVFFcZsbv/4EugY2mRGM+VAzKBUMJrSLBj7HAsw1X8VtfMjlkrAwI2u5hgNh2GbW2yV4nG0AWvZh0OvfyG6MWxBn7kmjm8VXcEjqKOYK4GZkXwv1rvFrGOCbu+hb5wMnasxm1ubkJ7xUDmQjBApAscRYLLy3ILjxTstEEsWizDC3xcjz99xNW12Wr5T8rCW/SlGmHn7zxCn9IZnnstMe2F5aA7wdY0D5H70C2BQ1EuH6Ls3cAUdgL5ha+9GORC0sAr5RQCG9lIYBbnnkd+CnS/tURZ0GOpzJkb47zgv3nmJcoQJY3yC85Kdl4gZx4PQ9UAsqVzMlfQ3yvMn2+J4LP0T+ufkT6ey1Q38i9F3D0DfnckJt+Ui3VJQDsQSXIrYKQRgFOS98285JS/Pct5ipsmY8o/FyE2+KynPxWdXHIzxErmPkJ2UHHIzPQ/9qjDjOBm6/jWHJeVcNPR/FnWZlfOCzBewGn33OPTdyei7b5hnS06pHEhyXFRqHhDgMpJ7IFvyUJRTRWzExXcJLr79YBgWOyW0EHKwsX4Fyi22p6hfAb4TtEr6OfSTr2iBiu4PqMs8LBUV+oaKjzDjmI6++1P0XfkiUkeAVQ7EERiVkF4ImEjAss8GGIwTTZAWnARLbk3YP9gbF9+VBVfGIQW4guTySjHcmfU2+kEtjNthXEkl+ToWLBVNQbP9H2LeA5xXI+9Ee2LGscDpwpUDcRpRJc8SAtJgwDgHLTHlkRgX3/3M9DMsudVi/+CTPBad86J4DG3B8soYFGT17b5gcSR8zkznwXHsi35Q8q9f4Y64w87fprqgVrTv0XBeAc7RXWvKgThyHSgh2SAA4zwD/G8iFlNYgxnHsbj4psC4vVBMijmpC1fRBzAy8kWMTorNJOvfcByXwKDuCWxvzURcKvk8gT5jQfLOrFxX6SPge6bmIz/ad1UuC1MOJJfoKtmmEYCxngjirF8sCBnZBnnxyf+BGMHHkfxPjmzlFT0/jMxDgumafCiK2eZdcFjyWZkreQLlbzSej8qZKIN99AqM+wUmSG2RYMb8B+wtyhndIlsCLDIpB2IRMEWeGwRgrN9nQWdS4T4RlD+HY7QPRsXyn+gKp0kBSi6rpDkoNmczLRi2O4DvAZhtngWH9QXK6rMB/esm4PGAwwC0wDEdiBnzpdhbtPsPipZVUg7EMmSKIVcIYHR2d75Gwol1wMUcguPYE+Vfw9W0OTGvLx1zOVWivk5vqj/ETPJlkr8BvlnfNgr9SiJolTSFBDkxw12DGd047CONdkh3JQAAEABJREFUh2PK+y3PyoGURHcsnUp0jYQdu80wAzLNGBUfjFFbHRzHxxlos8rebuKN3+s/fv7O/ccFhwwYHxo8cOLcndLF/qClSQsGZlWoRWY+lr7mGP3SIltyckEvdRm2STBsBXuZZHLlCp8KpyqwR3EsNLH7zqwPgW8dHMcIzOhWQk5BgnIgBYFdFZoOAd5EPuR/gJir8Bwcx1hcfBMwKn4tV4Ukym3v2PJEzIitj5Xzhi0GbejoKE8bY6D1tG25KFFGPo65mt6DcTscZf0X0U6Qfz18CozjyEIaNjuKF4IHfXAS8D4LZZt7B5WgZ0A/g3eivYBvCHwFDc47kIJWRxVeCgjwZIqxh0aiLm8jOhn+iVFbDS7aI+A48v0Q3fdREb0rVuC3f4aosxA7gCbvQc4YgNN+KPhxRHNB0DtwynPg/OUG7v+aY1JUEgHgfRf65P7A7xycy+dgnsXy1us4/hxRDnBakBdgg34Cxzwa9EEeQUXxMknlQNBCKhQfAnwMfckxGkFMDzug3X/l3gqX0TCM2uY7IM+OCMsbx8y87a9D7RSYDQ9w+geM2jHMNBnG7BnISvaXrfIPspaCZgIM2z5wytcwnD9oVbCBAPD7IzCfgHgk8DwI/X8ojg9GHI+8RvZTsd3qTsqB2GhoxZIfBLiaNmOz8XgYKPmwm/x/dCsFy1uC5Z0p57FGQ+XeSj7vTkmiKAb1SVKdTXJcGka7i2HMRnOUhgLHkcx0AeIEHO/PlSQN3ET8ylGz42X3dYGy/xc7BsqBFHsLKf0IBuopjMKqmWk44iWA5CGMiuUUX74aog3n8hXfa/D7nCC6AdP9U0G3B3jGg/dWPo7+jTwVskCAJ9JXwPEl4HkTYjOO1zKjFUh9+jICyoH05dZ3Wd1huN5FvBKOYRJGxQfh91AM63/MFSRHwiNwfkRZFc3EdP8+duHrv13WHEpdhYBawkrsA+rYfQhgrf4LHkOb3Ke50lgh4H4E1AzE/W2oalCqCLDAilypVk7VqxQQUA6kFFpR1UEh4HoEVAXciIByIG5sNaWzQkAhoBAoAgSUAymCRlAqKAQUAgoBNyKgHIgbW623zipFIaAQUAjkHQHlQPIOuSpQIaAQUAiUBgLKgZRGO6paKAQUAoVCoA+XqxxIH258VXWFgEJAIZANAsqBZIOe4lUIKAQUAn0YAeVA+nDjF0fVlRYKAYWAWxFQDsStLaf0VggoBBQCBUZAOZACN4AqXiGQEgHBnDJPZSgEHEAgWxG5dyCTGiq8voYjdV8woPtCCzz+0B0y4vgW/P5e9zdU9x8XHJJtRbrxVzZt7/WHjtD9jefp1aEgfm9HWXfo1cFb5TnyzqmobhpFR9/p7cZXgBNZ9/KqhhHQ72RgchHiAr062ITzO3R/6CbE+bo/eJ3XHzrD62s4psLfsEsB1HSuyEn1nnJ/w+Fef/Bs3R8M6b7QLYh/1P2NN+r+UKMX6RW+xp8VQ9tQfb1W7g8e4vE3nuKtDl0LPRfEoz80X/eHbvb4QrN19F+vP/Qj5wDqI5KODw7yVDX8xFPdOMHjD57k9TWOqXB73+4jTZdYTc1bHTwTF8VFuCCm677GC+O//tD0VL8ef+PFsrEThSQ71seHjkXH+JPepm0QrD1NzEFiOp+JzpKRmKbh9w9EWnOsnP+mV4eW44KclEyW2TRPdfB4ry/4gLfM2CCIniESN5OgAH7PZpRLgs8lnCPvNkMYL+gDv16P+iyskM6E8vMpH990sMQ2jo0/9Drq/pGmaS9Dv/uByTzE80nwhTg/Cxr9FnE6EV8MnRcBx0cN0j4E/+uI11f4gz8lhz8VVaGRkD1Ll30hU/SHanR/Yy3ablomg+/FIALtc5feNmi9RtqLgvh2Iq5Ffach/gZtdAER1ch0g8VznW0TusNbFRqN9LwG2b89/tAd+suDPtCI1zCJe4Wg2dDz/HgkQpvQecx0LaH/CqINuj/4lBfOjw69tdwxZRmlphEGTHfXfSEMOnDdyraS123nb40uf7dGmR6PaCukEYx3GrGdWXCeXl9wKtq2TgePHm/rUHe5Mn1rRL4HtkH2n04Byb4Fe6tDv4GsR/QtvIE17a+o4lImXixYPGGgb8MG3NmT0+tv/KWUDb7edimhfOSjP8J2VTfOhGOa3FOOOnceAU0IXoiLYh5EzycWTfFfovmpfnExXQe6achPGrwwFLovtJIMWomOcTqIBiNmCh4SdBwuyAd1f+PTHl/j/pkYEvN1jAJ1f2gNC16CWf9kQfTdxPw0x0NQn6nSmXiqQ3fTuAazfGlE9sjCLMdT3TgBmGCUHVqvGYb8E6T5XdgcAOp+iFZCGYgl3yyD+Hlc4Ktk/ZHmSIDxPgmCrkcbN2WMRI0w/CG03S2k/6c/+HoFD0aZui+4FM7vabTPr0FgdgaFtqGzhEarUMc/D6ha8APw5jTAwR3v8YdWS2PGcsDBtBul+3ybpxHxUQJOUR/S9i4GBxJDyvXHYO0wYppH8rqVUV63nb+N29I6z7uuZxGS6Z528cOMuq3dF80F2yCoQfKAvjEepbxkEX0B19J1hkZnUpKP7KO6v+kdIeiPyB6HOAixZygD7of3TBQkLpCykd5VjwT7tFUXlI98qeN8EmIu4k04VyHHCMiO/77VMnCBfZ6MR8eShDQU6NTHJss3lyaOZBZvePyNp2SkxygJF/1dhFEgaA9BtB1Y0Gl6ufaWXLKwLSSBUfc37gXDORcj6Q0sxFJgglE2DU0gceZQEEboWjPKWjpw4tydshWK9vvChoyNVMFGTz44zYsYo0xintAzz9K5oBNiWsdab3XwF5b4TBIPrGz6vu4PLWEMQJhopEm2VGRDmXgx2mNuKgLT6QJDqjTE6Feb0mSnzOJ+WnvKzK0Z+70lcPgxoqUADL/syeDxh35P8WtUDOuZ1+ucKZlt+bQXXYYEJvooA4nKdgABOBCMCbIUNGB8aLDXH3qF5JIEOfPBiONejNxTTkO3q563o/7KoFfRYeWo1plCiQZrxC+V+5sOzEYgpulXYWS+DoZzJuTkfOSMMghlTejoKF9biCUfIkrmPG4hpnnIcyTAmn1XCH4cTmmcIwK7hHixPNJRZqzF6fGIzgXmmXBKcsTsnMx8Sqq/DJD3bteMKsCrJdJ4/cErYMyxVJ2YmvZYltudAFOQ7gmZz+B6Y5mpFEW2CGhEgJrsf+Qm8BaD1qDVD7UmJTM1+uIDHiyB9KSUI8Z20U8uBcmlnJ7Z2Z6XaWSsoupbky7JmBEuBF1shi4HNDvKJR+vr3GMbdlC4Hq3wd2GkrvYdH/j7cSUcpmzi8zeD9MjFZVNu9pj7s6FkfHJsE2PIfX7iLkI0zFDntIl2Lm9kS6BOf2pv9xeP0hQSvcFfYL4koQkM4dZl2umEEXjDAJwIDYEGSzX4UluGGITGJvVtIsNKaZYWNMe7kZ4dH2/jjLxLNIyr+OCyGbYwSva7rDJCzZej6+CBcHiMenY86rA9np8WQQG83dE4uxcli36GUuyla9j3wyW6v5s5WTixwx5EVU2bQ+6gvYJlJ+fwNRpUyYtGEjMfyb1KWkEOhvbYhVZo68IH31IRHaQPXCYyzBU9wdnbC1AH7DDQzBQmddStzLY/BVEJ5dXBQ+yyV5oNs0o55Y8KlFGiy/YpI9v2BMG88pclysEjYCjsr3k5Klu2I/ia/K51jQuv1wvM54nQfvGz4rkK2dqGIxLh0hv67gKZeiIKpQwArYcCAz4exXxW0hFdX6w4fgaqrw1GKOa7DZkLSisaXytBfIEUsEJJwU5xFV8qF4dOj9PhX9KmBmSoT2Yp/KIBdvbpK6v11hoK/KlZ1c5+5H5O7q6WNz5I8j4uEtzeatz16H6KVUEbDkQIXi2Qbw8j6D01/2hJ9ignC859KjTuAo3P9wk6FqCwexRp1ycDtIHDloDwQcj5ivsGX/g0GJp3pcH3QOWnC25QnafDszauq4bOWzZlj4Nngsrb7eRh6OuOyDmM4zBqNr55zQy1MAQPKkXSeYEIzMJfUPEcv+oiZhnYd9iIgtjtMbaTw0yRpIQfsz0LiKiZkS7YTvvmkHygUS7/Gb5dgRhLm5ogNjUwSAxNXVu75yKqtBIzA2n9M5RKU4hgDY5w9AwcLEtEC1km1cx5hsBuw4klZ6vwuhdL0icRoLkUlMtjL58svTzVAwOpX9ExAuwrHEmyXKZLsDvQiKyfP84eLoH5rHdE7I6+68QdJcgPqE8pg2NhmtHR8OB2mhL7bz2lrqlkdYZz7S11KzuCM94Kdpa1xoN1zVEw4EJZMT2Jqa/2CkZ5Z1vh89BnmeZ+BpB9Cu0yQTU4zysP90G+RsQswtM44jMGxwYNtknsiuT6HPU514IuZhkX5ORxHQc30TE66iPf5joDMQs3pDA6Cp9HEQXVd8pB/IFWv1XMHaHRMN1s9vDdfdGWwPN0XCgqT0cmBpt79hdENfnAhfInR2t2Hl3GOPpkdbaRfFyWwI34ffsaIWxO0b2v8+mXCYaKe82syhD9KB/nwTXRDuMoe2tgbPaw7VLNi2vMf3AXnTZReuiLYETYXjn95Br5vQQb9WNPzZDGKdhmPj4QdZfr0HUMegDR0bCtXPQDx5AmzSjHrdGW+qmRUd8tSdKuBAxm7CrxxeSs+GMMnRfaDyI9kO0GyKEmWKUK4aiPqehXnPj9Yn387oFOL4AfXBvQXwqCsCABt8q5AIBJbOIEHDCgXxa1iEOlAYiZb1WzvoGRvNyIWcmKYlsZAg6DnKvp8WTY0m5F89ow8j+KsF8ctJ8E4mC6LvlQzb/xARpIsnWZ0j+RZgNwbAMi7bWzqcVM/6dSGT1GIa3honkXoM11rItx1hjyJr6zzCwB8PQPp5SUn29AZobmYT9Z1akcNZM7bsw06WS3F7EzCKm7S9nitQybXM6GeiP98HJ7AOaZYgqfIuAwcT3ShugCf654LJ9hEYHMtGRmHOcjsHRbTiW18euVmaV34pXR4VAIHsHYsSO2ryi7hMzyrdjZoIllbvM0GaiESxOwajP1N007S21D5KgYCaZqfKZeK9Ueb3SOx9A3ImJ7vfwln2iLQG5tCF60dlMiDHJFyxa4xZs3kjjCrcmvDs1Kvo8HMNJ3VNTn0XCdU8Bq3NTU6TP0VgckJ6CSN62C73sPuj6SVSLjIgur/kgUznb8uFkgIEP56b6J+iSB8bVkjzHXalCPEzEwzGgOE3agLbW2ufbWy58p7058NdIOPBspDVwT7Slblqkw8B1pl1AR19eRurjCgSyciCCeLZcXrFS0/aOjumg70DMInArZhb/a0VAtP/Os0C/EdF6YNrbNFP7N14mUYkLY8rGlpn/Ms1nkrCjJfAySC09lIaNzT3AEw85/mprj0SqrJYBrG4nQW9Z5ZP0whAZl7A00k6XtHaiQVolNc+21W8w86wURL3eDWVHDxfzYKmv7nhg8V7GOmCGHg3XrKSn6rdkpFUERYGAbQciLwxM1+yM9iUAAA3bSURBVK+3XIuVs77BiHOxZb4EBi3G5yWcmjuML3Pxn8wRd6diwebvOMNFEMGoursEZ88EC3n3lmmhaORhNHbuANMMdgkFXUKP/c/XdtiZ2d57szhz22Acf6IdncAztyNc8zp+bQYWmCFNtsnsejbYiDsxE7vY9RVRFUiJAGxLyry0GWC8PS1BmkyDydYdRV0im9uW1/yj69jajyan0tZYJDVWdXaUv0UThWZptI4LeYcB3vKBpvRn7NqYIuxFtDn6aUVTr1STCWWakHsGZm5/7ilxl3Rr5vLpeDDIDXv8WAqRaMVXWd2AIUuLtNQ9AfxXy+M+Fj9uDwcs3WZd+viUXg3hB+xVilnDuqZN3ljsDXucMBXEtvdQPGXxFzBaXj5jpqxfk263vsn4NDas3hZdhkqb+V+WZMWZSmPiJbRmGooxRd6L6JvmwGdIfBvRahhEky4vT8XEBh+dKi9tuqBFtLg+/n6vtHRmMuV/VpihKyEawSz/IKyEaqSqkgwBuw7kqzbvD+RafDKZGdOimzfKNXzTt7EmCGxv72c8mXBu6XDjkulyPdr6LZaCc7/8k6omkxYM9B4f3E2vDlZ6/aFzdPmfK4K3vRssFVvPdBjSXXumOXmOfZas372FkfpLNnRiigxJ+adcBvHPbMgkQxjyj4/ssPbiKWd+oleimQRYYTNkxUcjPmxvqbU9wCy++iiNUiFg14G8mfLW2VQlJaY/Fd8k25SYZPJ4HS2ti7/I0SR9bzKmre/q6Z2XIgVLWCkNVAoWa8mTGio8E5r29foajoGDuMDrD16h+0MPefyh1d62jg/FFl5PgpfBwN5Gnf+5YvW2YgJvTl9sV2bQ3yjLj8aUbmaVSnoFlW32pMpkQcNS5aVJ/7xj2YxX0uRbyuqaXa21xORiYsFke3nbxdXuk6rbciBM1o1wEnSTP7uRhDAhyfrsIYE5fijY8rIEjJAR53XiC87CWx38hV7dONPrC93nrQ69rLdpf+OYsVaw9igR3yg6/0PhROA8UhB9l4hwSNl9mJyrQzJNhGbZMfcUIwxh580BgKinpK7zyiYdyJm/g66LjYhtz64p9ceOc0wtrYhzRIxai1g9pZqDCGj2ZHH2t9kJkmveloqHpfiXJYZkxCyy1z2Z3Axp8n+yvf7QvXAW64Xgx0mIuRipTRGCRoA153ssbKAkFJSjsKlNj9mZUXZTh0n7Dzn4qfB0SFwt3wABXyv/rMxBTYhYCDtLtuTCz9cdn/XvM7MtF7aPPZVTcNlyIFjSyf5CZ7Kz4Wpn1tK96oIsz0C6C7B2pvuCv8Vy1DtMvBgO8BRw/wCxpAIT2nJTFNXLslpMtvojpfp0lO2cKittutDs3eWXRihml9YdCLxOGpHFmvVGNjdTFGullF7JEbB3wTI5MIrH+Du5TmlSsZiUJtdUlsjpSHybCvLNr7o/+Box34REG8so4HJJgOfQaKAOP1JcCsdY7GJHI0MT8mYLO6ypedhIeadYaib35cDn/dN9WiuN7SJgz4EIh0eKprW343R6CGfOuaHz+hrPNTRaTcQHkvoUDgFmW0a7jG3txaSpZ9/JEhorB9J3mrtQjqB0EcZy1SzB4tbSraGbasZltrQ1cnzDgS2l3MHEBv3XHZoqLZ1AwN4MxImSS1CGx984EdWy/noXMJkIn2Kp6EVMn+6jzj+iIvVJj4AmDG96iuS5WwxqS56TRarQ7Oz5ZVFggViZlE2hvvNxQ2Nvaw0WDowMc7QHst3EG7/HJB7apqyNAziH/3Q6Cb6Xia9BnIrLcSxz2e7yv03aw4FRkXDgVCzCqfvsv8UXkH170v1Is3fThSZSPlfSXb75M/SN75inVpQKAXcg4CoHUsyQdnRsWQD97OApnw+4AVP/oyIxbbdOJ1F7WiRcOwfxzmhz4NFIy4UbaPGMbaNiQ9AQlKVCBgQMomgGkqTZmqaZf3lmUgm9E+HlVJv1hkWluBwBOwbP5VV2Xn35j38wEHb+tOrmaCQyLBoOzIwsCzxNy2tMrR9rgrJ7Gp/6yIft3XHHMbZ3+28aWNE/9DTZxZulNFMIpEFAOZA04JjO0rZYfr08DMolcBzn23n9OVby7G0Om65QaRCyTUcrSFh++DAtYofeWo4LbXhaGpWpEHAhAujXLtS6yFSGM5hgTSWxCktVV1rjSaTm/olnffyYU9VfaIatBwIFC0dvv/YM/mY4+oh8JU0qVVW6QsCVCCgHkmWzVfgb5MNq8j+wk0hKlaRdnyrHTDo20QeZoevrNO1l/DEwsPzmASYeBT7HApdptt4I7JgCSpBCIEcIKAeSJbCGpu1rUUQ02hFbbZGnG7kgPrhbgqMnDjys6ag+WQjrfHPzBzYk7OX1Nexugy85i+BTk2eoVIWAuxFQDiTL9sOG61CLIv5OK2b82yLPt+STHsT+hzjy2wSHjwSzwxILLS7zf3En0RAwTEuSbDnJUz0fex85bC/LGvUdBlXT3COgHEiWGBtM1m7PzPJljp7N/zwBKm+PqIIJBDBbs/lmXZ5O2Pw2UURaEhZbGtMSqEyFgIsRUA4ky8YDgNZuz2TameKzCHsFY37wB3ucfZML7fOszZr39wyJ3GKTN87m8YUmEfFYUh+FQIkigOurRGuWr2pZf9ZgUMXmT0baUU/3hS4CX37e7IuCSiFENm3/HOph679KmMRUYD4e/JaD1x/6EZz9/ZYZFYNCwEUIwIGIUlvzziv8hhCWjZPBwvIsAoZsHDHNy2vlSqGwp86KoIO32q4K08N6dchvhV+vumGYIJIzH1xfVjgVrULAXQioDp5le2nM8lUkVqX8QveHpptl8viCJ8B5PGKWXtF1R0CQdkf3FItnglq81aGraFJDRSZOrz94Nmllr4Puh4gqKATsIOAaHuVAsm0qQe/aFDFf9wXnku+mlC/ZkyNZ3R+6jZn/bLMM62wsMHi2zlbMHNFwzUrotx7RdgAqc/Q27T3MBBd4qoNTyv3BQ/TxDXt6qucP9/oajvH6g1fovtBaQSxfdGnrLcC2lVOMCoECIaAcSJbAR7hC3uVj66V9xDxT5/b1Xn/jPTA+F3mrG0/3+kNneDHa1f2hZRjJSud0TpYqKnYgwIKvwE+2YRdiOh+y7tOI15Chvcci9rZg7VE4jkuQZ/WZoGz1UfwKgYIioBW09FIovGXaZlTjCUS7YZAgcSqMzzwhxJ8E0SI52oWwSsT8B8Gc/0KdLTGZtEhr7SIi8WGyPJWmEFAI2ENAORB7uHXjEixu65aQ25N/wMlk9SR7btUrXuls8BkF0m4jyv0aUQWFQEkhoByIA83Z3lK3FGI+Qcx90IwxTNplpD6WEYi/Mp/oZsuM2TF8UdYh9iYSr2UnRnErBIoPgd4OpPh0dIdGTOfmWlGsLd0fbZ7xPpExPNdllar8+Cv0ieS+VV6qyKxN2ryiDoML/l5eClSFKATyiIByIA6BHW0JhJn4XofEJROzNhIOTJEZ2CMZKH9VtIdAdNMOPyfidZTjD5Y2fx9pqVnVVQx3/aofhUDJIND3HAhzzi7kSLj2NGJ6Oge94wNPeb+jEuTa+6/vBAF9+vCpsyLRfoZ8G8CrucKBia/B0uZVCfJFwnGqQ5WuEHAVAq5yIIKZix1dzESkoV/unJ5iVbS948CNS6Z/uU0mw01tOzF5wIYyYIlQLa37KjriqxEA5U+Jyc4ccwCDiTk9ZKGoHinqVCHgcgSkA9nLeh14Z+s8PTnY8v8tMIldekqxcb6bZR4mS7pinb0Ky0y/QzkdiLaDXAKJhuuOppWzvkkUwoJ2Sjw3c8xC28EUHZOdf87bYTsuLzMjPx2NICPlQ5Vp+AbaLru+3mgPB34tSEwiQW+lKcNkFj9maNoh0XBtsjfw7mtSyDYyIThtOwvStttGbOFAEJl9AegPLYiNk0L24PiBk19Mlu2NEGTDrjmpdN+QpWFMfzUa/U5BfAcuooXyN30k0NKSbOFBAy8QJGXxHQJlZ450J7NI+3I6kzrdvrUsErQwU+ykpSaTsreRtbcGrmaBzW4W85nI9P9/CKIviXgBaTS8xxIIbfuw9kgmveP5xH8kRAF8YyzMGUgWjyfySv6MEXXcuKW8jbL8aFz2fLxs2S7QG+Jup/hvZz2SH1PTxv8M6OZgyeKnPVz3ULQ1sB/611lgfRLRQDQb5CABM05jPBzHsR3NNUmXxTD4uZoy1qV7PQUbmd7h9WYcr61yt+HWXU73cul2T4eGTX1K/6m/TBCJ67vJ31pOql9ZPlNzesHWcwXxYsS4fYrrI8vJEDEouM56SYrDKgJapCXwu/ZwYGp7uPY3uIjOlr/pY5z2PqsF9aSHgb1ua7npy6v9TWd+YGqkpe6unnKsnkfDgRs75XXWV9Y5XeykDVxrtRxJH2mdsT7aUlcTiWlDsfx2PGYO8mloecuvfPDwDdC8g4sUm6zcEnfkLCa2a9GhMETTo80B+RQ6SHqHaLhmZbQ1cHbGGK49J4oo69ARrjN15xH0XR6XCz7JayqijtT5QGVvZS2ktLXUrI6XLesWLz9wbubyA7WEPQ0LxaQkjaB/oX/8Ag5/KNrqdMY+BoilQXwcv9IxvAoD9igRt5IQ8wSLU7SYtjt4qqLhGS2U5hMJ112auS6d7bWVDgOIpWlEUntr7ZtxvOJYgXcbbjjemtbrN3DupuU1X6ST25nHIhqum91Nfi9ZPcqR5bcEwp38zn2j/96HGLdPcX1kORlie7juGuc0UJJSIfD/AQAA//+0dzLyAAAABklEQVQDAHbVM8FrfPTjAAAAAElFTkSuQmCC"></a>
+</div></header>
+
+<main>
+<nav class="bc" id="bc" aria-label="Navigasi"></nav>
+
+<section class="v" id="v-home">
+  <div class="hero">
+    <span class="eye">Pembiayaan Usaha</span>
+    <h1>Brosur &amp; Simulasi Kredit Bank Mandiri</h1>
+    <p>Pilih produk kredit, lihat brosur angsuran, hitung simulasi, atau jelajahi kartu kredit.</p>
+  </div>
+  <div class="grid lift" role="group" aria-label="Pilih produk">
+    <a class="opt" href="#/kur"><div class="top"><span class="rd"></span><h3>KUR · Kredit Usaha Rakyat</h3></div>
+      <div class="rate">6%<small> / tahun</small></div><p>Pembiayaan bunga rendah untuk pelaku usaha dengan angsuran anuitas bulanan.</p>
+      <div class="chips"><span class="tag">Plafon s.d. Rp500 juta</span><span class="tag">Tenor 12–60 bulan</span></div>
+      <div class="go">Pilih KUR <svg class="i"><use href="#arr"/></svg></div></a>
+    <a class="opt" href="#/kum"><div class="top"><span class="rd"></span><h3>KUM · Kredit Usaha Mikro</h3></div>
+      <div class="rate">1,05%<small> flat / bulan</small></div><p>Pembiayaan usaha mikro dengan Normal Rate atau Special Rate sesuai kebutuhan.</p>
+      <div class="chips"><span class="tag">Normal &amp; Special Rate</span><span class="tag">Tenor 12–60 bulan</span></div>
+      <div class="go">Pilih KUM <svg class="i"><use href="#arr"/></svg></div></a>
+    <a class="opt" href="#/kpr/reguler"><div class="top"><span class="rd"></span><h3>KPR · Kredit Pemilikan Rumah</h3></div>
+      <div class="rate">1,98%<small> mulai / tahun</small></div><p>KPR dan Multiguna dengan suku bunga fix kategori Gold, Gold Selected, Silver, dan Bronze, lengkap dengan brosur dan simulasi angsuran.</p>
+      <div class="chips"><span class="tag">4 kategori</span><span class="tag">Brosur &amp; simulasi</span></div>
+      <div class="go">Pilih KPR <svg class="i"><use href="#arr"/></svg></div></a>
+    <a class="opt" href="#/ksm"><div class="top"><span class="rd"></span><h3>KSM · Kredit Serbaguna Mandiri</h3></div>
+      <div class="rate">5<small> class segmen</small></div><p>Kredit serbaguna untuk TNI/POLRI, ASN, BUMN, hingga swasta kelolaan, dengan persyaratan tiap class.</p>
+      <div class="chips"><span class="tag">Limit s.d. Rp 1 Miliar</span><span class="tag">Tenor s.d. 180 bulan</span></div>
+      <div class="go">Pilih KSM <svg class="i"><use href="#arr"/></svg></div></a>
+    <a class="opt" href="#/kartu-kredit"><div class="top"><span class="rd"></span><h3>Kartu Kredit</h3></div>
+      <div class="rate">30<small> kartu pilihan</small></div><p>Katalog kartu kredit Mandiri: travel, otomotif, golf, lifestyle, virtual, hingga corporate.</p>
+      <div class="chips"><span class="tag">8 kategori</span><span class="tag">Info &amp; ajukan kartu</span></div>
+      <div class="go">Lihat katalog <svg class="i"><use href="#arr"/></svg></div></a>
+  </div>
+</section>
+
+<section class="v" id="v-kartu-kredit">
+  <div class="head"><h2>Mandiri Kartu Kredit</h2></div>
+  <p class="sub">Pilih kartu yang sesuai dengan kebutuhan dan gaya hidup Anda.</p>
+  <div class="card">
+    <div class="tools"><div class="kk-tabs" id="kk-tabs" role="tablist" aria-label="Kategori kartu" style="margin:0"></div>
+      <div class="srch"><svg class="i"><use href="#srch"/></svg><input id="kk-s" placeholder="Cari kartu, mis. Signature" aria-label="Cari kartu"></div></div>
+    <div class="kk-cat" id="kk-cat"></div>
+    <div class="kk-grid" id="kk-grid"></div>
+    <p class="hint">Benefit, iuran tahunan, dan syarat lengkap tiap kartu tersedia di halaman &ldquo;Info lengkap&rdquo; pada situs Mandiri Kartu Kredit.</p>
+  </div>
+  <div class="card k"><h3>Tautan Berguna</h3>
+    <div class="kk-links">
+      <a class="btn o" target="_blank" rel="noopener" href="https://www.mandirikartukredit.com/comparison">Bandingkan Kartu</a>
+      <a class="btn o" target="_blank" rel="noopener" href="https://www.mandirikartukredit.com/hot-offer">Promo</a>
+      <a class="btn o" target="_blank" rel="noopener" href="https://www.mandirikartukredit.com/ringkasan-informasi-produk-dan-layanan-riplay-kartu-kredit-bmri-id-riplay">RIPLAY</a>
+      <a class="btn" target="_blank" rel="noopener" href="https://www.mandirikartukredit.com/apply-kartu-kredit">Apply Now</a>
+    </div></div>
+  <div class="card"><div class="pic"><div class="av">M</div><div class="t"><span>Info lebih lanjut hubungi</span><b>Mandiri Call 14000</b></div><a class="btn" target="_blank" rel="noopener" href="https://wa.me/628118414000?text=Halo%20MITA%20%21"><svg class="i"><use href="#tel"/></svg> MITA WhatsApp</a></div>
+  <div class="legal">mandiricare@bankmandiri.co.id | www.bankmandiri.co.id</div></div>
+</section>
+
+
+
+<div id="dyn"></div>
+</main>
+
+<footer>Bank Mandiri berizin dan diawasi oleh Otoritas Jasa Keuangan serta merupakan peserta penjaminan LPS.<br>Simulasi bersifat estimasi. Ketentuan dan persetujuan kredit mengikuti kebijakan Bank Mandiri.</footer>
+
+<dialog id="dlg"><div class="in">
+  <button class="x" onclick="dlg.close()" aria-label="Tutup">×</button>
+  <h2 style="font-size:22px">Hubungi Kami</h2><p class="sub" style="margin-bottom:0">Info lebih lanjut mengenai KUR dan KUM:</p>
+  <div id="dc"></div>
+</div></dialog>
+<button class="fab" id="hub" aria-label="Hubungi kami"><svg class="i"><use href="#tel"/></svg><span>Hubungi</span></button>
+<output id="toast" aria-live="polite"></output>
+
+<script>
+var $=function(i){return document.getElementById(i)},TEN=[12,24,36,48,60];
+function f(x){return Math.round(x).toLocaleString("id-ID")}
+var PIC={kur:{n:"Nugi",t:"0877-7545-6667",wa:"6287775456667"},kum:{n:"Nugroho",t:"0898-8120-167",wa:"628988120167"},kpr:{n:"Ilman",t:"0851-1754-6520",wa:"6285117546520"},ksm:{n:"Wida",t:"0895-2546-0886 / 0895-6224-09553",wa:"6289525460886"}};
+var P={
+ kur:{N:"KUR",full:"Kredit Usaha Rakyat",big:"6%",unit:"/ tahun",flat:false,min48:110e6,max:500e6,
+  lims:[10,15,25,30,40,50,60,70,80,90,100,110,150,200,350,500],
+  calc:function(p,n){var r=.005;return p*r/(1-Math.pow(1+r,-n))},
+  stats:[["6% / tahun","Suku bunga"],["Rp500 juta","Plafon maksimum"],["12–60 bulan","Jangka waktu"],["Anuitas","Perhitungan bulanan"]],
+  req:["Memiliki usaha","Surat Keterangan Usaha / SITU / SIUP","Fotokopi Agunan: BPKB atau Sertifikat","Fotokopi KTP suami, istri, KK & Surat Nikah","Pas Foto 4 x 6 1 lembar (suami & istri)","Fotokopi NPWP (Limit > Rp 50 juta)"]},
+ kum:{N:"KUM",full:"Kredit Usaha Mikro",big:"1,05%",unit:"flat / bulan",flat:true,min48:150e6,max:Infinity,
+  lims:[10,20,30,40,50,60,70,80,90,100,150,200,250,300,350,400,450,500],
+  calc:function(p,n,r){return p/n+p*r/100},
+  stats:[["1,05% flat","Normal Rate / bulan"],["Special Rate","Rate bebas diketik"],["12–60 bulan","Jangka waktu"],["Flat","Perhitungan bulanan"]],
+  req:["Memiliki Usaha","Surat Keterangan Usaha / SITU / SIUP / NIB","Fotokopi Agunan: Sertifikat atau BPKB","Fotokopi KTP Suami Istri, KK, Akta Nikah","Pas Foto 4x6 1 lembar (suami & istri)","Fotokopi NPWP (limit > 50 juta)"]}
+};
+var ST={kur:{p:50e6,n:12},kum:{p:50e6,n:12,m:"n",r:"0,90"}};
+var ico=function(x){return'<svg class="i"><use href="#'+x+'"/></svg>'};
+
+/* ---- build dynamic views ---- */
+function pic(k){var c=PIC[k];return'<div class="pic"><div class="av">'+c.n[0]+'</div><div class="t"><span>Info lebih lanjut hubungi</span><b>'+c.n+' – '+c.t+'</b></div><a class="btn" target="_blank" rel="noopener" href="https://wa.me/'+c.wa+'">'+ico("tel")+' WhatsApp</a></div><div class="legal">MITA WhatsApp 08118414000 | Mandiri Call 14000 | www.bankmandiri.co.id</div>'}
+function build(k){var c=P[k],h="";
+ h+='<section class="v" id="v-'+k+'"><div class="head"><h2>'+c.N+' Bank Mandiri</h2><span class="badge">'+c.big+' '+c.unit+'</span></div><p class="sub">'+c.full+' – pilih menu yang ingin Anda lihat:</p>'+
+ '<div class="stats">'+c.stats.map(function(s){return'<div class="stat"><b>'+s[0]+'</b><span>'+s[1]+'</span></div>'}).join("")+'</div>'+
+ '<div class="grid" role="group"><a class="opt" href="#/'+k+'/brosur"><div class="top"><span class="rd"></span><span class="ic">'+ico("tbl")+'</span><h3>Brosur '+c.N+'</h3></div><p>Tabel angsuran per bulan, persyaratan, dan kontak.</p><div class="go">Lihat brosur '+ico("arr")+'</div></a>'+
+ '<a class="opt" href="#/'+k+'/sim"><div class="top"><span class="rd"></span><span class="ic">'+ico("calc")+'</span><h3>Simulasi Perhitungan</h3></div><p>'+(c.flat?"Normal Rate atau Special Rate, untuk nominal berapa pun.":"Hitung angsuran untuk nominal pinjaman berapa pun.")+'</p><div class="go">Mulai simulasi '+ico("arr")+'</div></a></div></section>';
+ /* brosur */
+ h+='<section class="v" id="v-'+k+'-brosur"><div class="head"><h2>Brosur '+c.N+' Bank Mandiri</h2><span class="badge">'+c.big+(c.flat?" flat":"")+'</span></div><p class="sub">Angsuran per bulan (Rp) berdasarkan limit dan jangka waktu (bulan).</p>'+
+ '<div class="card"><div class="tools"><h3 style="margin:0">Tabel Angsuran</h3><div class="srch">'+ico("srch")+'<input id="s-'+k+'" placeholder="Cari limit, mis. 50" inputmode="numeric" aria-label="Cari limit"></div></div><div class="tw"><table id="t-'+k+'"></table></div><p class="hint">Klik angka pada tabel untuk langsung membuka simulasinya.</p></div>'+
+ '<div class="card k"><h3>Persyaratan</h3><ul class="req">'+c.req.map(function(r){return'<li>'+ico("chk")+r+'</li>'}).join("")+'</ul></div><div class="card">'+pic(k)+'</div></section>';
+ /* simulasi */
+ h+='<section class="v" id="v-'+k+'-sim"><h2>Simulasi Perhitungan '+c.N+'</h2><p class="sub">'+(c.flat?"Bunga flat per bulan. Masukkan nominal berapa pun.":"Bunga 6% per tahun, angsuran anuitas bulanan. Masukkan nominal berapa pun.")+'</p><div class="sim"><div class="card">'+
+ (c.flat?'<fieldset><legend>Jenis rate</legend><div class="seg two"><label><input type="radio" name="m-'+k+'" value="n" checked><span>Normal Rate<small>1,05% flat / bulan</small></span></label><label><input type="radio" name="m-'+k+'" value="s"><span>Special Rate<small>Rate diketik sendiri</small></span></label></div></fieldset><div class="fld" id="rw-'+k+'" hidden><label for="r-'+k+'">Special rate (% flat per bulan)</label><div class="pf pct"><input id="r-'+k+'" inputmode="decimal" value="0,90" autocomplete="off"><b>%</b></div></div>':'')+
+ '<div class="fld"><label for="p-'+k+'">Nominal pinjaman</label><div class="pf"><b>Rp</b><input id="p-'+k+'" inputmode="numeric" autocomplete="off"></div><div class="qs">'+[25,50,100,150,250,500].map(function(m){return'<button type="button" class="q" data-q="'+m+'">'+m+' jt</button>'}).join("")+'</div><div class="msg" id="e-'+k+'"></div></div>'+
+ '<fieldset><legend>Jangka waktu</legend><div class="seg" id="tn-'+k+'">'+TEN.map(function(n){return'<label><input type="radio" name="n-'+k+'" value="'+n+'"><span>'+n+' bulan<small>'+(n/12)+' tahun</small></span></label>'}).join("")+'</div><div class="msg" id="h-'+k+'"></div></fieldset>'+
+ '<details><summary>Ketentuan simulasi</summary><ul><li>'+(c.flat?"Angsuran = pokok ÷ tenor + (pokok × rate per bulan). Normal Rate 1,05% flat per bulan.":"Angsuran anuitas dengan bunga 6% per tahun (0,5% per bulan), sesuai tabel brosur.")+'</li><li>Tenor 48 dan 60 bulan tersedia untuk limit mulai Rp '+f(c.min48)+', sesuai brosur.</li>'+(c.flat?'':'<li>Plafon maksimum Rp 500.000.000.</li>')+'<li>Hasil merupakan estimasi, bukan penawaran resmi.</li></ul></details></div>'+
+ '<aside class="res" aria-live="polite"><div class="l">Angsuran per bulan</div><div class="big" id="o-'+k+'">-</div><div class="bar"><i class="b1" id="b1-'+k+'"></i><i class="b2" id="b2-'+k+'"></i></div><div class="lg"><span class="a">Pokok</span><span class="b">Bunga</span></div>'+
+ '<div class="row"><span>Plafon</span><b id="pl-'+k+'">-</b></div><div class="row"><span>Jangka waktu</span><b id="jw-'+k+'">-</b></div>'+
+ '<div class="acts"><button class="btn" id="cp-'+k+'">'+ico("cp")+' Salin ringkasan</button><a class="btn o" id="wa-'+k+'" target="_blank" rel="noopener">'+ico("tel")+' Ajukan via WhatsApp</a></div></aside></div>'+
+ '<details><summary>Rincian angsuran per bulan</summary><div class="tw"><table id="sc-'+k+'"></table></div></details></section>';
+ return h}
+$("dyn").innerHTML=build("kur")+build("kum");
+
+/* ---- tabel brosur ---- */
+function ok(c,p,n){return n<=36||p>=c.min48}
+function tabel(k){var c=P[k],h="<thead><tr><th>Limit Kredit</th>"+TEN.map(function(n){return"<th>"+n+" bln</th>"}).join("")+"</tr></thead><tbody>";
+ c.lims.forEach(function(m){var p=m*1e6;h+="<tr><td>"+f(p)+"</td>"+TEN.map(function(n){return ok(c,p,n)?'<td data-p="'+p+'" data-n="'+n+'">'+f(c.calc(p,n,1.05))+"</td>":'<td class="na">-</td>'}).join("")+"</tr>"});
+ $("t-"+k).innerHTML=h+"</tbody>";
+ $("t-"+k).onclick=function(e){var t=e.target.closest("td[data-p]");if(!t)return;ST[k].p=+t.dataset.p;ST[k].n=+t.dataset.n;if(k=="kum")ST.kum.m="n";location.hash="#/"+k+"/sim"};
+ $("s-"+k).oninput=function(){var q=this.value.replace(/\D/g,"");$("t-"+k).querySelectorAll("tbody tr").forEach(function(r){r.hidden=q&&r.firstChild.textContent.replace(/\D/g,"").indexOf(q)<0})}}
+tabel("kur");tabel("kum");
+
+/* ---- simulator ---- */
+function toast(t){var o=$("toast");o.textContent=t;o.classList.add("on");clearTimeout(o.t);o.t=setTimeout(function(){o.classList.remove("on")},2200)}
+function sim(k){var c=P[k],s=ST[k],P_=$("p-"+k),R=$("r-"+k),E=$("e-"+k),H=$("h-"+k),sum="";
+ function rate(){return s.m=="s"?parseFloat(String(s.r).replace(",",".")):1.05}
+ function upd(){var p=s.p,rt=rate(),msg="";
+  P_.value=p?p.toLocaleString("id-ID"):"";
+  if(c.flat){document.querySelectorAll("input[name=m-"+k+"]").forEach(function(x){x.checked=x.value==s.m});$("rw-"+k).hidden=s.m!="s";R.value=s.r;
+   if(s.m=="s"&&!(rt>=0&&rt<=100))msg="Masukkan special rate yang valid (0–100%)."}
+  if(!msg&&!p)msg="Masukkan nominal pinjaman.";
+  if(!msg&&p>c.max)msg="Plafon maksimum Rp "+f(c.max)+".";
+  E.className="msg"+(msg&&p?" e":"");E.textContent=msg;
+  var allow=TEN.filter(function(n){return ok(c,p,n)});if(allow.indexOf(s.n)<0)s.n=allow[allow.length-1];
+  document.querySelectorAll("input[name=n-"+k+"]").forEach(function(x){x.disabled=!ok(c,p,+x.value);x.checked=+x.value==s.n});
+  H.textContent=p<c.min48?"Tenor 48 dan 60 bulan tersedia untuk limit mulai Rp "+f(c.min48)+".":"";
+  var T=function(id,v){$(id+"-"+k).textContent=v};
+  if(msg){["o","pl","jw"].forEach(function(i){T(i,"-")});$("sc-"+k).innerHTML="";$("b1-"+k).style.width=$("b2-"+k).style.width="0";sum="";return}
+  var n=s.n,a=Math.round(c.calc(p,n,rt)),b=p,tp=0,rows="";
+  for(var i=1;i<=n;i++){var it=c.flat?Math.round(p*rt/100):Math.round(b*.005),pk=i==n?b:a-it,ins=pk+it;b-=pk;tp+=ins;
+   rows+="<tr><td>"+i+"</td><td>"+f(ins)+"</td><td>"+f(pk)+"</td><td>"+f(it)+"</td><td>"+f(b)+"</td></tr>"}
+  var ti=tp-p;
+  T("o","Rp "+f(a));T("pl","Rp "+f(p));T("jw",n+" bulan");
+  var pc=Math.round(p/tp*1000)/10;$("b1-"+k).style.width=pc+"%";$("b2-"+k).style.width=(100-pc)+"%";
+  $("sc-"+k).innerHTML="<thead><tr><th>Bulan</th><th>Angsuran</th><th>Pokok</th><th>Bunga</th><th>Sisa</th></tr></thead><tbody>"+rows+"</tbody>";
+  sum="Simulasi "+c.N+" Bank Mandiri"+(c.flat?" ("+(s.m=="s"?"Special Rate "+String(s.r).replace(".",",")+"%":"Normal Rate 1,05%")+" flat/bulan)":" (6% per tahun)")+"\nPlafon: Rp "+f(p)+"\nJangka waktu: "+n+" bulan\nAngsuran per bulan: Rp "+f(a)+"";
+  $("wa-"+k).href="https://wa.me/"+PIC[k].wa+"?text="+encodeURIComponent("Halo "+PIC[k].n+", saya ingin mengajukan.\n\n"+sum)}
+ P_.oninput=function(){s.p=+this.value.replace(/\D/g,"");upd()};
+ document.querySelectorAll("#v-"+k+"-sim [data-q]").forEach(function(b){b.onclick=function(){s.p=+b.dataset.q*1e6;upd()}});
+ $("tn-"+k).onchange=function(e){s.n=+e.target.value;upd()};
+ if(c.flat){document.querySelectorAll("input[name=m-"+k+"]").forEach(function(x){x.onchange=function(){s.m=x.value;upd()}});R.oninput=function(){s.r=this.value.replace(/[^\d.,]/g,"");upd();R.value=s.r}}
+ $("cp-"+k).onclick=function(){if(!sum)return;try{navigator.clipboard.writeText(sum).then(function(){toast("Ringkasan disalin")},function(){toast("Tidak dapat menyalin")})}catch(e){toast("Tidak dapat menyalin")}};
+ return upd}
+var UPD={kur:sim("kur"),kum:sim("kum")};
+
+
+/* ---- KPR & Program Livin' KPR ---- */
+var BER1=[[4.06,3],[8.76,3],[9.76,4]],BER2=[[4.96,3],[8.96,3],[9.96,4]];
+var KPD=[
+{k:"Gold",p:"KPR",pr:"KPR",r:[["1 Tahun",[[2.70,1]],5],["2 Tahun",[[3.66,2]],6],["3 Tahun",[[2.76,3]],15],["3 Tahun",[[3.70,3]],12],["5 Tahun",[[3.50,5]],15],["5 Tahun",[[5.18,5]],10],["5 Tahun",[[6.18,5]],5],["Berjenjang 10 Tahun",BER1,15],["Berjenjang 10 Tahun",BER2,12]]},
+{k:"Gold Selected KPR Primary",p:"KPR",pr:"KPR",r:[["1 Tahun",[[2.70,1]],5],["2 Tahun",[[3.66,2]],6],["3 Tahun",[[2.76,3]],15],["3 Tahun",[[3.70,3]],12],["5 Tahun",[[3.50,5]],15],["Berjenjang 10 Tahun",BER1,15],["Berjenjang 10 Tahun",BER2,12]]},
+{k:"Silver",p:"KPR / Multiguna",pr:"both",r:[["1 Tahun",[[8.00,1]],3],["3 Tahun",[[4.70,3]],10],["5 Tahun",[[4.66,5]],12],["5 Tahun",[[5.76,5]],11],["5 Tahun",[[6.18,5]],10],["5 Tahun",[[7.18,5]],5],["10 Tahun",[[8.06,10]],15],["10 Tahun",[[8.00,10]],10],["Berjenjang 10 Tahun",[[6.88,3],[8.88,3],[9.88,4]],10]]},
+{k:"Bronze",p:"KPR / Multiguna",pr:"both",r:[["1 Tahun",[[14.25,1]],1],["2 Tahun",[[11.00,2]],2],["3 Tahun",[[8.40,3]],5],["3 Tahun",[[9.75,3]],3],["10 Tahun",[[8.86,10]],5]]}
+];
+/* Program Marketing Livin' KPR – langkah terakhir 0 tahun = "fix sisa min. tenor", r[3] = pilihan min. tenor */
+var LVD=[
+{k:"Pengajuan KPR melalui Livin' KPR",s:"KPR",p:"KPR",pr:"KPR",r:[
+ ["1 Tahun",[[1.98,1]],3],["1 Tahun",[[2.60,1]],5],["1 Tahun",[[4.18,1]],1],
+ ["2 Tahun",[[2.38,2]],5],["2 Tahun",[[3.56,2]],6],["2 Tahun",[[5.18,2]],2],
+ ["3 Tahun",[[4.48,3]],5],["3 Tahun",[[5.48,3]],3],["3 Tahun",[[2.66,3]],15],["3 Tahun",[[3.60,3]],12],
+ ["5 Tahun",[[3.40,5]],15],["5 Tahun",[[5.08,5]],10],["5 Tahun",[[6.08,5]],5],
+ ["10 Tahun",[[6.48,10]],10],
+ ["Berjenjang 10 Tahun",[[4.86,3],[8.86,3],[9.86,4]],12],
+ ["Berjenjang 10 Tahun",[[3.28,3],[8.88,3],[9.88,0]],8,[8,10]],
+ ["Berjenjang 10 Tahun",[[3.96,3],[8.66,3],[9.66,4]],15]]},
+{k:"Pengajuan Multiguna melalui Livin' KPR",s:"Multiguna",p:"Multiguna",pr:"MG",r:[
+ ["1 Tahun",[[2.98,1]],3],["1 Tahun",[[5.18,1]],1],
+ ["2 Tahun",[[3.38,2]],5],["2 Tahun",[[6.18,2]],2],
+ ["3 Tahun",[[4.60,3]],10],["3 Tahun",[[5.48,3]],5],["3 Tahun",[[6.48,3]],3],
+ ["5 Tahun",[[5.66,5]],11],["5 Tahun",[[6.08,5]],10],["5 Tahun",[[7.08,5]],5],
+ ["10 Tahun",[[8.76,10]],5],["10 Tahun",[[7.96,10]],15],["10 Tahun",[[7.48,10]],10],
+ ["10 Tahun",[[4.28,3],[9.88,3],[10.88,0]],8,[8,10]]]},
+{k:"Aplikasi Eligible Livin' KPR yang Diproses Non Livin'",s:"Non Livin'",p:"KPR / Multiguna",pr:"both",r:[
+ ["1 Tahun",[[3.10,1]],5],["2 Tahun",[[4.06,2]],6],
+ ["3 Tahun",[[3.16,3]],15],["3 Tahun",[[4.10,3]],12],
+ ["5 Tahun",[[3.90,5]],15],["5 Tahun",[[5.58,5]],10],["5 Tahun",[[6.58,5]],5],
+ ["Berjenjang 10 Tahun",[[5.36,3],[9.36,3],[9.86,4]],12],["Berjenjang 10 Tahun",[[4.46,3],[9.16,3],[10.166,4]],15],
+ ["3 Tahun",[[5.10,3]],10],
+ ["5 Tahun",[[6.16,5]],11],["5 Tahun",[[6.58,5]],10],["5 Tahun",[[7.58,5]],5],
+ ["10 Tahun",[[8.46,10]],15]]}
+];
+var PRD=[
+{k:"KPR",s:"KPR",p:"KPR",pr:"KPR",r:[["1 Tahun",[[2.08,1]],3],["1 Tahun",[[4.28,1]],1],["2 Tahun",[[2.48,2]],5],["2 Tahun",[[5.28,2]],2],["3 Tahun",[[4.58,3]],5],["3 Tahun",[[5.58,3]],3],["5 Tahun",[[5.18,5]],10],["5 Tahun",[[6.18,5]],5],["10 Tahun",[[6.58,10]],10],["10 Tahun",[[3.38,3],[8.98,3],[9.98,0]],8,[8,10]]]},
+{k:"Multiguna",s:"Multiguna",p:"Multiguna",pr:"MG",r:[["1 Tahun",[[3.08,1]],3],["1 Tahun",[[5.28,1]],1],["2 Tahun",[[3.48,2]],5],["2 Tahun",[[6.28,2]],2],["3 Tahun",[[5.58,3]],5],["3 Tahun",[[6.58,3]],3],["5 Tahun",[[6.18,5]],10],["5 Tahun",[[7.18,5]],5],["10 Tahun",[[7.58,10]],10],["10 Tahun",[[4.38,3],[9.98,3],[10.98,0]],8,[8,10]]]}
+];
+var TOD=[{k:"KPR dan Multiguna Take Over dan Top Up",s:"Take Over & Top Up",p:"KPR / Multiguna",pr:"both",fac:["KPR Take Over","KPR Top Up","Multiguna Take Over","Multiguna Top Up"],r:[["10 Tahun",[[7.77,10]],10]]}];
+var KPN={KPR:{mr:"739",n:"KPR"},MG:{mr:"740",n:"Multiguna"}};
+var KPWA="628118414000";
+var pc=function(x){var t=x.toFixed(2);if(Math.abs(parseFloat(t)-x)>1e-9)t=String(x);return t.replace(".",",")+"%"};
+function stepTxt(s){return s.map(function(x,i){return(i?"lalu ":"")+pc(x[0])+(x[1]?" fix "+x[1]+" th":" fix sisa min. tenor")}).join(", ")}
+function ann(b,i,n){return i?b*i/(1-Math.pow(1+i,-n)):b/n}
+function minTxt(r){return(r[3]||[r[2]]).join(" th / ")+" th"}
+
+function mkK(o){
+ var D=o.D,Q=o.q,I=function(x){return Q+"-"+x},st=ST[o.id]={c:0,r:0,p:500e6,y:15,fl:{KPR:"",MG:""},mg:D[0].pr=="MG"?"MG":"KPR",prio:false,alt:false,f:-1},sum="";
+ function pk(c){var a=[];c.r.forEach(function(r,ri){(r[3]||[null]).forEach(function(mt){var s=r[1].map(function(x){return[x[0],x[1]]});if(mt){var u=s.slice(0,-1).reduce(function(t,x){return t+x[1]},0);s[s.length-1][1]=mt-u}a.push({ri:ri,l:r[0],s:s,raw:r[1],min:mt||r[2],alt:r[4]})})});return a}
+ function start(c,ri){var a=pk(c);for(var i=0;i<a.length;i++)if(a[i].ri==ri)return i}
+ function cur(){var a=pk(D[st.c]);if(!a[st.r])st.r=0;return a[st.r]}
+ function bump(){st.y=Math.max(st.y,cur().min)}
+ function html(){
+  var h='<section class="v" id="v-'+o.id+'"><div class="head"><h2>'+o.title+'</h2><span class="badge">'+o.badge+'</span></div><p class="sub">'+o.sub+' – pilih menu yang ingin Anda lihat:</p>'+(o.stats?'<div class="stats">'+o.stats.map(function(s){return'<div class="stat"><b>'+s[0]+'</b><span>'+s[1]+'</span></div>'}).join("")+'</div>':'')+
+  '<div class="grid" role="group"><a class="opt" href="#/'+o.href+'/brosur"><div class="top"><span class="rd"></span><span class="ic">'+ico("tbl")+'</span><h3>Brosur</h3></div><p>'+o.bdesc+'</p><div class="go">Lihat brosur '+ico("arr")+'</div></a>'+
+  '<a class="opt" href="#/'+o.href+'/sim"><div class="top"><span class="rd"></span><span class="ic">'+ico("calc")+'</span><h3>Simulasi Perhitungan</h3></div><p>Hitung angsuran masa fix untuk nominal dan tenor berapa pun.</p><div class="go">Mulai simulasi '+ico("arr")+'</div></a></div></section>';
+  h+='<section class="v" id="v-'+o.id+'-brosur"><div class="head"><h2>Brosur '+o.title+'</h2><span class="badge">'+o.badge2+'</span></div><p class="sub">'+o.bsub+'</p>'+
+  '<div class="card"><div class="kk-tabs" id="'+I("tabs")+'"'+(D.length<2?' hidden':'')+' role="tablist" aria-label="Kategori"></div><div id="'+I("t")+'"></div><p class="hint">Klik baris pada tabel untuk langsung membuka simulasinya.</p></div>'+
+  '<div class="card">'+pic("kpr")+'</div></section>';
+  h+='<section class="v" id="v-'+o.id+'-sim"><h2>Simulasi Perhitungan '+o.short+'</h2><p class="sub">Angsuran anuitas bulanan dengan bunga fix (efektif p.a.).</p><div class="sim"><div class="card">'+
+  (o.prio?'<label class="chk"><input type="checkbox" id="'+I("prio")+'"><span>Nasabah Prioritas / Private Bank Mandiri</span></label><div class="msg" id="'+I("pm")+'" style="margin:0 0 16px"></div>':'')+
+  '<fieldset'+(D.length<2||o.link?' hidden':'')+'><legend>Kategori</legend><div class="seg" id="'+I("cat")+'">'+D.map(function(c,i){return'<label><input type="radio" name="'+I("c")+'" value="'+i+'"><span>'+(o.sect?c.s:c.k)+'<small>'+c.p+'</small></span></label>'}).join("")+'</div></fieldset>'+
+  '<fieldset><legend>Produk</legend><div class="seg two"><label><input type="radio" name="'+I("m")+'" value="KPR"><span>KPR</span></label><label><input type="radio" name="'+I("m")+'" value="MG"><span>Multiguna</span></label></div></fieldset>'+
+  '<div class="fld" id="'+I("selw")+'"><label for="'+I("sel")+'">Masa fix &amp; bunga fix rate</label><select id="'+I("sel")+'"></select></div>'+
+  '<div class="fld"><label for="'+I("p")+'">Nominal pinjaman</label><div class="pf"><b>Rp</b><input id="'+I("p")+'" inputmode="numeric" autocomplete="off"></div><div class="qs">'+[[250,"250 jt"],[500,"500 jt"],[1000,"1 M"],[2000,"2 M"]].map(function(m){return'<button type="button" class="q" data-q="'+m[0]+'">'+m[1]+'</button>'}).join("")+'</div><div class="msg" id="'+I("e")+'"></div></div>'+
+  '<div class="fld"><label for="'+I("y")+'">Tenor (tahun)</label><div class="pf pct"><input id="'+I("y")+'" inputmode="numeric" autocomplete="off"><b>th</b></div><div class="qs">'+[5,10,15,20,25,30].map(function(y){return'<button type="button" class="q" data-y="'+y+'">'+y+' th</button>'}).join("")+'</div><div class="msg" id="'+I("ye")+'"></div></div>'+
+  '</div>'+
+  '<aside class="res" aria-live="polite"><div class="l">Angsuran per bulan (awal)</div><div class="big" id="'+I("o")+'">-</div>'+
+  '<div id="'+I("ph")+'"></div><div class="row"><span>Plafon</span><b id="'+I("pl")+'">-</b></div><div class="row"><span>Jangka waktu</span><b id="'+I("jw")+'">-</b></div>'+
+  '<div class="acts"><button class="btn" id="'+I("cp")+'">'+ico("cp")+' Salin ringkasan</button><a class="btn o" id="'+I("wa")+'" target="_blank" rel="noopener">'+ico("tel")+' Ajukan via WhatsApp</a></div></aside></div>'+
+  '<details><summary>Rincian angsuran per bulan</summary><div class="tw"><table id="'+I("sc")+'"></table></div></details></section>';
+  return h}
+ $("dyn").insertAdjacentHTML("beforeend",html());
+
+ /* brosur */
+ function trs(c,ci,cat){var h="";c.r.forEach(function(r,ri){var ber=r[1].length>1,sp=1,skip=false;
+   if(o.merge){skip=ri&&c.r[ri-1][0]==r[0];if(!skip)while(c.r[ri+sp]&&c.r[ri+sp][0]==r[0])sp++}
+   else{skip=ri&&ber&&c.r[ri-1][0]==r[0];if(!skip&&ber)while(c.r[ri+sp]&&c.r[ri+sp][0]==r[0])sp++}
+   h+='<tr data-c="'+ci+'" data-r="'+start(c,ri)+'">';
+   if(cat&&!ri)h+='<td class="cat" rowspan="'+c.r.length+'">'+c.k+'</td><td class="cat" rowspan="'+c.r.length+'" style="font-weight:700">'+c.p+'</td>';
+   if(c.fac&&!ri)h+='<td class="cat" rowspan="'+c.r.length+'" style="text-align:left;font-weight:600"><ul>'+c.fac.map(function(x){return'<li>'+x+'</li>'}).join('')+'</ul></td>';
+   if(!skip)h+='<td'+(sp>1?' rowspan="'+sp+'"':'')+'>'+r[0]+'</td>';
+   h+='<td>'+(ber?stepTxt(r[1]):pc(r[1][0][0]))+'</td><td>'+minTxt(r)+'</td></tr>'});return h}
+ function tabel(){var f=st.f,h="";
+  if(o.sect){D.forEach(function(c,ci){if(f>=0&&f!=ci)return;h+='<h3 style="margin:'+(h?'22px':'4px')+' 0 10px">'+c.k+'</h3><div class="tw kpw"><table class="kpt"><thead><tr>'+(c.fac?'<th>Jenis Fasilitas</th>':'')+'<th>'+(c.fac?'Masa Fixed':'Masa Fix')+'</th><th>Suku Bunga Fixed Rate<br>(Efektif p.a.)</th><th>Min Tenor</th></tr></thead><tbody>'+trs(c,ci,false)+'</tbody></table></div>'})}
+  else{h='<div class="tw kpw"><table class="kpt"><thead><tr><th>Kategori</th><th>Produk</th><th>Masa Fix</th><th>Bunga Fix Rate<br>(Efektif p.a.)</th><th>Min Tenor</th></tr></thead><tbody>';
+   D.forEach(function(c,ci){if(f>=0&&f!=ci)return;h+=trs(c,ci,true)});h+='</tbody></table></div>'}
+  $(I("t")).innerHTML=h;
+  $(I("tabs")).innerHTML=[{k:"Semua",s:"Semua"}].concat(D).map(function(c,i){var v=i-1;return'<button type="button" class="q'+(f==v?" on":"")+'" data-f="'+v+'" role="tab" aria-selected="'+(f==v)+'">'+(c.s||c.k)+'</button>'}).join("")}
+ $(I("tabs")).onclick=function(e){var b=e.target.closest("[data-f]");if(!b)return;st.f=+b.dataset.f;tabel()};
+ $(I("t")).onclick=function(e){var t=e.target.closest("tr[data-r]");if(!t)return;st.c=+t.dataset.c;st.r=+t.dataset.r;if(D[st.c].pr!="both")st.mg=D[st.c].pr;bump();location.hash="#/"+o.href+"/sim"};
+ tabel();
+
+ /* simulator */
+ function num(v){var x=parseFloat(String(v).replace(",","."));return isNaN(x)?null:x}
+ function yr(d,m){var a=d/12+1,b=(d+m)/12;return a==b?"Tahun "+a:"Tahun "+a+"–"+b}
+ function upd(){if(o.link){var ci=0;D.forEach(function(d,i){if(d.pr==st.mg)ci=i});if(ci!=st.c){st.c=ci;st.r=0;bump()}}
+  var c=D[st.c],r=cur(),T=function(i,v){$(I(i)).textContent=v};
+  if(c.pr!="both")st.mg=c.pr;
+  document.querySelectorAll("input[name="+I("c")+"]").forEach(function(x){x.checked=+x.value==st.c});
+  document.querySelectorAll("input[name="+I("m")+"]").forEach(function(x){x.checked=x.value==st.mg;x.disabled=!o.link&&c.pr!="both"&&x.value!=c.pr});
+  if(o.prio){$(I("prio")).checked=st.prio;T("pm",st.prio?"Eligible suku bunga kategori Gold.":"")}
+  $(I("selw")).hidden=D.length<2&&pk(c).length<2;
+  $(I("sel")).innerHTML=pk(c).map(function(x,i){return'<option value="'+i+'"'+(i==st.r?" selected":"")+'>'+x.l+' · '+(x.raw.length>1?stepTxt(x.raw):pc(x.raw[0][0]))+(x.min?' · min '+x.min+' th':'')+'</option>'}).join("");
+  $(I("p")).value=st.p?st.p.toLocaleString("id-ID"):"";$(I("y")).value=st.y||"";
+  var N=st.y*12,fix=r.s.reduce(function(a,x){return a+x[1]*12},0),needF=N>fix,mr=KPN[st.mg];
+  var mp="",my="";
+  if(!st.p)mp="Masukkan nominal pinjaman.";
+  if(!st.y)my="Masukkan tenor.";else if(st.y<r.min)my="Tenor minimum paket ini "+r.min+" tahun.";else if(st.y>30)my="Tenor maksimum simulasi 30 tahun.";
+  $(I("e")).className="msg"+(mp&&st.p?" e":"");T("e",mp);$(I("ye")).className="msg"+(my&&st.y?" e":"");T("ye",my);
+  var reset=function(){["o","pl","jw"].forEach(function(i){T(i,"-")});$(I("ph")).innerHTML="";$(I("sc")).innerHTML="";sum="";$(I("wa")).removeAttribute("href")};
+  if(mp||my)return reset();
+  var p=st.p,bal=p,done=0,rows="",lines="",first=null,lt=[];
+  r.s.forEach(function(x){var m=Math.min(x[1]*12,N-done);if(m<=0)return;var i=x[0]/1200,a=Math.round(ann(bal,i,N-done));if(first===null)first=a;
+   var lb=yr(done,m)+" · "+pc(x[0])+" fix";lines+='<div class="row"><span>'+lb+'</span><b>Rp '+f(a)+'</b></div>';lt.push(lb+": Rp "+f(a));
+   for(var k=0;k<m;k++){var it=Math.round(bal*i),pkk=done+1==N?bal:a-it,ins=pkk+it;bal-=pkk;done++;rows+="<tr><td>"+done+"</td><td>"+f(ins)+"</td><td>"+f(pkk)+"</td><td>"+f(it)+"</td><td>"+f(bal)+"</td></tr>"}});
+  $(I("ph")).innerHTML=lines;T("o","Rp "+f(first));T("pl","Rp "+f(p));T("jw",st.y+" tahun ("+N+" bulan)");
+  $(I("sc")).innerHTML="<thead><tr><th>Bulan</th><th>Angsuran</th><th>Pokok</th><th>Bunga</th><th>Sisa</th></tr></thead><tbody>"+rows+"</tbody>";
+  var kn=(o.sect?c.s:c.k)+" · "+r.l+" ("+(r.raw.length>1?stepTxt(r.raw):pc(r.raw[0][0]))+")";
+  sum="Simulasi "+o.short+" Bank Mandiri ("+mr.n+")\nKategori: "+kn+"\nPlafon: Rp "+f(p)+"\nJangka waktu: "+st.y+" tahun\n"+lt.join("\n");
+  $(I("wa")).href="https://wa.me/"+PIC.kpr.wa+"?text="+encodeURIComponent("Halo, saya ingin mengajukan.\n\n"+sum)}
+ document.querySelectorAll("input[name="+I("c")+"]").forEach(function(x){x.onchange=function(){st.c=+x.value;st.r=0;bump();upd()}});
+ document.querySelectorAll("input[name="+I("m")+"]").forEach(function(x){x.onchange=function(){st.mg=x.value;upd()}});
+ $(I("sel")).onchange=function(){st.r=+this.value;bump();upd()};
+ if(o.prio)$(I("prio")).onchange=function(){st.prio=this.checked;if(st.prio&&st.c>1){st.c=0;st.r=0;bump()}upd()};
+ $(I("p")).oninput=function(){st.p=+this.value.replace(/\D/g,"");upd()};
+ $(I("y")).oninput=function(){st.y=+this.value.replace(/\D/g,"");upd()};
+ document.querySelectorAll("#v-"+o.id+"-sim [data-q]").forEach(function(b){b.onclick=function(){st.p=+b.dataset.q*1e6;upd()}});
+ document.querySelectorAll("#v-"+o.id+"-sim [data-y]").forEach(function(b){b.onclick=function(){st.y=+b.dataset.y;upd()}});
+ $(I("cp")).onclick=function(){if(!sum)return;try{navigator.clipboard.writeText(sum).then(function(){toast("Ringkasan disalin")},function(){toast("Tidak dapat menyalin")})}catch(e){toast("Tidak dapat menyalin")}};
+ return upd}
+
+UPD.reguler=mkK({id:"kpr-reguler",href:"kpr/reguler",q:"kp",D:KPD,nomr:true,title:"KPR dan Multiguna",short:"KPR dan Multiguna",badge:"mulai 2,70% p.a.",badge2:"KPR &amp; Multiguna",prio:true,
+ sub:"Suku bunga fix kategori Gold, Gold Selected, Silver, dan Bronze",bdesc:"Kategori, produk, masa fix, bunga fix rate, dan min. tenor.",
+ bsub:"Suku bunga fix (efektif p.a.) berdasarkan kategori, produk, dan masa fix."});
+UPD.livin=mkK({link:true,id:"kpr-livin",href:"kpr/livin",q:"lv",D:[LVD[0],LVD[1]],sect:true,merge:true,title:"Program Marketing Livin’ KPR",short:"Program Livin’ KPR",badge:"KPR &amp; Multiguna",badge2:"KPR &amp; Multiguna",
+ sub:"Pengajuan KPR/Multiguna melalui Livin’ KPR",bdesc:"Suku bunga fixed rate: masa fix dan min. tenor.",
+ bsub:"Suku Bunga Khusus Program Marketing Livin’ KPR (Pengajuan KPR/Multiguna)."});
+/* Opsi berikut disembunyikan; panggil KPX() untuk mengaktifkan kembali (dan tambahkan kartunya di halaman #/kpr) */
+var KPX=function(){
+UPD.nonlivin=mkK({id:"kpr-nonlivin",href:"kpr/nonlivin",q:"nl",D:[LVD[2]],sect:true,merge:true,title:"Aplikasi Eligible Livin’ KPR yang Diproses Non Livin’",short:"Eligible Livin’ KPR Non Livin’",badge:"KPR &amp; Multiguna",badge2:"KPR &amp; Multiguna",
+ sub:"Suku bunga untuk aplikasi eligible Livin’ KPR yang diproses non Livin’",bdesc:"Suku bunga fix, masa fix, dan min. tenor.",
+ bsub:"Suku Bunga untuk Aplikasi Eligible Livin’ KPR yang Diproses Non Livin’."});
+UPD.premiere=mkK({id:"kpr-premiere",href:"kpr/premiere",q:"pr",D:PRD,sect:true,merge:true,title:"Kategori Premiere",short:"Kategori Premiere",badge:"KPR &amp; Multiguna",badge2:"KPR &amp; Multiguna",
+ sub:"KPR dan Multiguna khusus Kategori Premiere",bdesc:"Suku bunga fix, masa fix, dan min. tenor untuk KPR dan Multiguna.",
+ bsub:"Suku bunga khusus Kategori Premiere untuk KPR dan Multiguna."});
+UPD.takeover=mkK({id:"kpr-takeover",href:"kpr/takeover",q:"tk",D:TOD,sect:true,merge:true,title:"KPR dan Multiguna Take Over dan Top Up",short:"Take Over dan Top Up",badge:"7,77% p.a.",badge2:"KPR &amp; Multiguna",
+ sub:"Take Over dan Top Up KPR dan Multiguna",bdesc:"Jenis fasilitas, masa fixed, suku bunga fixed, dan min. tenor.",
+ bsub:"Suku bunga fixed Take Over dan Top Up KPR dan Multiguna."});
+};
+
+/* ---- KSM (Kredit Serbaguna Mandiri) ---- */
+var KSC=[
+{id:"class1",n:"Class 1",sm:"TNI, POLRI, ASN (APBN), Badan/Lembaga Non APBN, TOP BUMN",tm:["TNI","POLRI","ASN (APBN)","Badan/Lembaga Non APBN (Lembaga Pemerintah seperti OJK, BI, BPJSTK, dll)","TOP BUMN"],inc:3,g:[{lim:1000,ten:180}]},
+{id:"class2",n:"Class 2",sm:"BUMN Tier A, B, C dan perusahaan anak",tm:["BUMN Tier A, B, C","Perusahaan Anak Bank Mandiri","Perusahaan Anak Penyetaraan Top BUMN"],inc:5,g:[{lim:750,ten:180}]},
+{id:"class3",n:"Class 3",sm:"BUMN Others, BUMD, ASN Horizontal, Swasta Debitur &amp; Group Debitur Kelolaan",tm:["BUMN Others","BUMD","ASN Horizontal","Swasta Debitur &amp; Group Debitur Kelolaan: Corporate Banking, Large Commercial Banking"],inc:5,g:[{lim:500,ten:60},{lim:750,ten:120}]},
+{id:"class4",n:"Class 4",sm:"Swasta Debitur – Kelolaan Non Large Commercial Banking",tm:["Swasta Debitur – Kelolaan Non Large Commercial Banking"],inc:5,g:[{lim:500,ten:120}]},
+{id:"class5",n:"Class 5",sm:"Swasta Non Debitur (non group debitur) Kelolaan",tm:["Swasta Non Debitur (Non group debitur) Kelolaan: Corporate Banking, Large Commercial Banking"],inc:5,g:[{lim:300,ten:36}]}
+];
+var KS_T=[12,24,36,48,60,72,84,96,108,120,132,144,150,156,168,180],KS_L=[10,30,50,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000];
+function fmtJ(j){return j>=1000?"Rp "+(j/1000)+" Miliar":"Rp "+j+" Juta"}
+function mkS(c){
+ var I=function(x){return c.id+"-"+x},st=ST[c.id]={g:c.g.length-1,p:100e6,y:12,inc:0,rate:""},sum="";
+ var G=function(){return c.g[st.g]};
+ function num(v){var x=parseFloat(String(v).replace(",","."));return isNaN(x)?null:x}
+ function segs(nm){return c.g.length<2?"":'<fieldset><legend>Batas limit &amp; tenor</legend><div class="seg two">'+c.g.map(function(g,i){return'<label><input type="radio" name="'+nm+'" value="'+i+'"><span>Limit '+fmtJ(g.lim)+'<small>Tenor s.d. '+g.ten+' bulan</small></span></label>'}).join("")+'</div></fieldset>'}
+ var h='<section class="v" id="v-ksm-'+c.id+'"><div class="head"><h2>KSM '+c.n+'</h2><span class="badge">Kredit Serbaguna Mandiri</span></div><p class="sub">'+c.sm+' – pilih menu yang ingin Anda lihat:</p>'+
+ '<div class="grid" role="group"><a class="opt" href="#/ksm/'+c.id+'/brosur"><div class="top"><span class="rd"></span><span class="ic">'+ico("tbl")+'</span><h3>Brosur '+c.n+'</h3></div><p>Persyaratan dan tabel angsuran per bulan.</p><div class="go">Lihat brosur '+ico("arr")+'</div></a>'+
+ '<a class="opt" href="#/ksm/'+c.id+'/sim"><div class="top"><span class="rd"></span><span class="ic">'+ico("calc")+'</span><h3>Simulasi Perhitungan</h3></div><p>Hitung angsuran dengan suku bunga yang Anda ketik sendiri.</p><div class="go">Mulai simulasi '+ico("arr")+'</div></a></div></section>';
+ h+='<section class="v" id="v-ksm-'+c.id+'-brosur"><div class="head"><h2>Brosur KSM '+c.n+'</h2><span class="badge">Kredit Serbaguna Mandiri</span></div><p class="sub">Persyaratan dan angsuran per bulan (Rp) berdasarkan limit dan jangka waktu (bulan).</p>'+
+ '<div class="card k"><h3>Target Market</h3><ul class="req">'+c.tm.map(function(t){return'<li>'+ico("chk")+t+'</li>'}).join("")+'</ul></div>'+
+ '<div class="card"><h3>Persyaratan</h3>'+segs(I("gb"))+'<div class="stats" id="'+I("req")+'" style="margin:0"></div></div>'+
+ '<div class="card"><div class="tools"><h3 style="margin:0">Tabel Angsuran</h3></div><div class="fld" style="max-width:320px"><label for="'+I("rb")+'">Suku bunga (% efektif p.a.)</label><div class="pf pct"><input id="'+I("rb")+'" inputmode="decimal" autocomplete="off" placeholder="mis. 8,25"><b>%</b></div><div class="msg" id="'+I("tm")+'"></div></div><div class="tw kpw"><table id="'+I("t")+'"></table></div><p class="hint">Klik angka pada tabel untuk langsung membuka simulasinya.</p></div>'+
+ '<div class="card">'+pic("ksm")+'</div></section>';
+ h+='<section class="v" id="v-ksm-'+c.id+'-sim"><h2>Simulasi Perhitungan KSM '+c.n+'</h2><p class="sub">Angsuran anuitas bulanan dengan suku bunga yang Anda ketik sendiri.</p><div class="sim"><div class="card">'+segs(I("g"))+
+ '<div class="fld"><label for="'+I("inc")+'">Penghasilan per bulan</label><div class="pf"><b>Rp</b><input id="'+I("inc")+'" inputmode="numeric" autocomplete="off"></div><div class="msg" id="'+I("ie")+'"></div></div>'+
+ '<div class="fld"><label for="'+I("p")+'">Nominal limit</label><div class="pf"><b>Rp</b><input id="'+I("p")+'" inputmode="numeric" autocomplete="off"></div><div class="qs" id="'+I("qp")+'"></div><div class="msg" id="'+I("pe")+'"></div></div>'+
+ '<div class="fld"><label for="'+I("y")+'">Jangka waktu (bulan)</label><div class="pf pct"><input id="'+I("y")+'" inputmode="numeric" autocomplete="off"><b>bln</b></div><div class="qs" id="'+I("qy")+'"></div><div class="msg" id="'+I("ye")+'"></div></div>'+
+ '<div class="fld"><label for="'+I("r")+'">Suku bunga (% efektif p.a.)</label><div class="pf pct"><input id="'+I("r")+'" inputmode="decimal" autocomplete="off" placeholder="mis. 8,25"><b>%</b></div><div class="msg" id="'+I("re")+'"></div></div></div>'+
+ '<aside class="res" aria-live="polite"><div class="l">Angsuran per bulan</div><div class="big" id="'+I("o")+'">-</div><div class="bar"><i class="b1" id="'+I("b1")+'"></i><i class="b2" id="'+I("b2")+'"></i></div><div class="lg"><span class="a">Pokok</span><span class="b">Bunga</span></div>'+
+ '<div class="row"><span>Limit</span><b id="'+I("pl")+'">-</b></div><div class="row"><span>Jangka waktu</span><b id="'+I("jw")+'">-</b></div><div class="row"><span>Suku bunga</span><b id="'+I("sb")+'">-</b></div>'+
+ '<div class="acts"><button class="btn" id="'+I("cp")+'">'+ico("cp")+' Salin ringkasan</button><a class="btn o" id="'+I("wa")+'" target="_blank" rel="noopener">'+ico("tel")+' Ajukan via WhatsApp</a></div></aside></div>'+
+ '<details><summary>Rincian angsuran per bulan</summary><div class="tw"><table id="'+I("sc")+'"></table></div></details></section>';
+ $("dyn").insertAdjacentHTML("beforeend",h);
+
+ function reqs(){var g=G();$(I("req")).innerHTML=[["Rp "+c.inc+" Juta","Min income"],[fmtJ(g.lim),"Max limit"],[g.ten+" bulan","Max tenor"]].map(function(x){return'<div class="stat"><b>'+x[0]+'</b><span>'+x[1]+'</span></div>'}).join("")}
+ function tabel(){var g=G(),r=num(st.rate),ok=r!==null&&r>=0&&r<=100,tens=KS_T.filter(function(t){return t<=g.ten});
+  var t='<thead><tr><th>Limit Kredit</th>'+tens.map(function(n){return"<th>"+n+" bln</th>"}).join("")+'</tr></thead><tbody>';
+  KS_L.filter(function(l){return l<=g.lim}).forEach(function(l){var p=l*1e6;t+="<tr><td>"+f(p)+"</td>"+tens.map(function(n){return ok?'<td data-p="'+p+'" data-n="'+n+'">'+f(ann(p,r/1200,n))+"</td>":'<td class="na">-</td>'}).join("")+"</tr>"});
+  $(I("t")).innerHTML=t+"</tbody>";
+  $(I("tm")).className="msg"+(st.rate!==""&&!ok?" e":"");$(I("tm")).textContent=ok?"":(st.rate!==""?"Masukkan suku bunga yang valid (0–100%).":"Masukkan suku bunga untuk menampilkan angsuran.")}
+ function upd(){var g=G(),T=function(i,v){$(I(i)).textContent=v},r=num(st.rate),rOk=r!==null&&r>=0&&r<=100;
+  document.querySelectorAll("input[name="+I("g")+"],input[name="+I("gb")+"]").forEach(function(x){x.checked=+x.value==st.g});
+  $(I("inc")).value=st.inc?st.inc.toLocaleString("id-ID"):"";$(I("p")).value=st.p?st.p.toLocaleString("id-ID"):"";$(I("y")).value=st.y||"";
+  if(document.activeElement!=$(I("r")))$(I("r")).value=st.rate;if(document.activeElement!=$(I("rb")))$(I("rb")).value=st.rate;
+  $(I("qp")).innerHTML=[50,100,250,500,750,1000].filter(function(m){return m<=g.lim}).map(function(m){return'<button type="button" class="q" data-q="'+m+'">'+(m>=1000?m/1000+" M":m+" jt")+'</button>'}).join("");
+  $(I("qy")).innerHTML=[12,24,36,60,120,180].filter(function(m){return m<=g.ten}).map(function(m){return'<button type="button" class="q" data-y="'+m+'">'+m+' bln</button>'}).join("");
+  var mi="",mp="",my="",mr="";
+  if(!st.inc)mi="Masukkan penghasilan per bulan.";else if(st.inc<c.inc*1e6)mi="Min income Rp "+c.inc+" Juta per bulan.";
+  if(!st.p)mp="Masukkan nominal limit.";else if(st.p>g.lim*1e6)mp="Max limit "+fmtJ(g.lim)+".";
+  if(!st.y)my="Masukkan jangka waktu.";else if(st.y>g.ten)my="Max tenor "+g.ten+" bulan.";
+  if(!rOk)mr=st.rate===""?"Masukkan suku bunga.":"Masukkan suku bunga yang valid (0–100%).";
+  [["ie",mi,st.inc],["pe",mp,st.p],["ye",my,st.y],["re",mr,st.rate!==""]].forEach(function(m){$(I(m[0])).className="msg"+(m[1]&&m[2]?" e":"");T(m[0],m[1])});
+  var reset=function(){["o","pl","jw","sb"].forEach(function(i){T(i,"-")});$(I("sc")).innerHTML="";$(I("b1")).style.width=$(I("b2")).style.width="0";sum="";$(I("wa")).removeAttribute("href")};
+  if(mi||mp||my||mr){reset();tabel();return}
+  var p=st.p,n=st.y,i=r/1200,a=Math.round(ann(p,i,n)),b=p,tp=0,rows="";
+  for(var k=1;k<=n;k++){var it=Math.round(b*i),pk=k==n?b:a-it,ins=pk+it;b-=pk;tp+=ins;rows+="<tr><td>"+k+"</td><td>"+f(ins)+"</td><td>"+f(pk)+"</td><td>"+f(it)+"</td><td>"+f(b)+"</td></tr>"}
+  var ti=tp-p,pc2=Math.round(p/tp*1000)/10,rs=String(st.rate).replace(".",",")+"%";
+  T("o","Rp "+f(a));T("pl","Rp "+f(p));T("jw",n+" bulan");T("sb",rs+" p.a.");$(I("b1")).style.width=pc2+"%";$(I("b2")).style.width=(100-pc2)+"%";
+  $(I("sc")).innerHTML="<thead><tr><th>Bulan</th><th>Angsuran</th><th>Pokok</th><th>Bunga</th><th>Sisa</th></tr></thead><tbody>"+rows+"</tbody>";
+  sum="Simulasi KSM "+c.n+" Bank Mandiri\nLimit: Rp "+f(p)+"\nJangka waktu: "+n+" bulan\nSuku bunga: "+rs+" p.a.\nAngsuran per bulan: Rp "+f(a);
+  $(I("wa")).href="https://wa.me/"+PIC.ksm.wa+"?text="+encodeURIComponent("Halo, saya ingin mengajukan.\n\n"+sum);tabel()}
+ function seg(x){x.onchange=function(){st.g=+x.value;var g=G();if(st.p>g.lim*1e6)st.p=g.lim*1e6;if(st.y>g.ten)st.y=g.ten;reqs();upd()}}
+ document.querySelectorAll("input[name="+I("g")+"],input[name="+I("gb")+"]").forEach(seg);
+ $(I("inc")).oninput=function(){st.inc=+this.value.replace(/\D/g,"");upd()};
+ $(I("p")).oninput=function(){st.p=+this.value.replace(/\D/g,"");upd()};
+ $(I("y")).oninput=function(){st.y=+this.value.replace(/\D/g,"");upd()};
+ [I("r"),I("rb")].forEach(function(id){$(id).oninput=function(){st.rate=this.value.replace(/[^\d.,]/g,"");upd()}});
+ $(I("qp")).onclick=function(e){var b=e.target.closest("[data-q]");if(b){st.p=+b.dataset.q*1e6;upd()}};
+ $(I("qy")).onclick=function(e){var b=e.target.closest("[data-y]");if(b){st.y=+b.dataset.y;upd()}};
+ $(I("t")).onclick=function(e){var t=e.target.closest("td[data-p]");if(!t)return;st.p=+t.dataset.p;st.y=+t.dataset.n;location.hash="#/ksm/"+c.id+"/sim"};
+ $(I("cp")).onclick=function(){if(!sum)return;try{navigator.clipboard.writeText(sum).then(function(){toast("Ringkasan disalin")},function(){toast("Tidak dapat menyalin")})}catch(e){toast("Tidak dapat menyalin")}};
+ reqs();tabel();
+ return upd}
+
+/* halaman pilihan KSM */
+$("dyn").insertAdjacentHTML("beforeend",'<section class="v" id="v-ksm"><div class="head"><h2>KSM Bank Mandiri</h2><span class="badge">Kredit Serbaguna Mandiri</span></div><p class="sub">Pilih class sesuai segmen Anda – tiap class punya brosur dan simulasi perhitungan:</p><div class="grid" role="group" aria-label="Pilihan class">'+
+ KSC.map(function(c){var mx=c.g[c.g.length-1];return'<a class="opt" href="#/ksm/'+c.id+'"><div class="top"><span class="rd"></span><h3>'+c.n+'</h3></div><p>'+c.sm+'</p><div class="chips"><span class="tag">Min income Rp '+c.inc+' Juta</span><span class="tag">Limit s.d. '+fmtJ(mx.lim)+'</span><span class="tag">Tenor s.d. '+mx.ten+' bulan</span></div><div class="go">Pilih <svg class="i"><use href="#arr"/></svg></div></a>'}).join("")+'</div></section>');
+KSC.forEach(function(c){UPD[c.id]=mkS(c)});
+
+/* ---- kartu kredit ---- */
+var KB="https://www.mandirikartukredit.com/",KI=KB+"uploads/media/";
+var KK=[
+{id:"travel",n:"Travel",d:"Untuk Anda yang gemar bepergian: nilai tukar kurs kompetitif, asuransi perjalanan, dan Fiestapoin (Mandiri Signature: 3 Fiestapoin per transaksi Rp20.000, tukar 100 Fiestapoin dengan 100 GarudaMiles).",c:[
+ ["Mandiri Signature","signature","redesign-kartu/Visa-Signature-Front.png"],
+ ["Marriott Bonvoy® Mandiri Kartu Kredit","mandiri-marriott-bonvoy-card","GANANG/MARRIOTT-BONVOY/Marriott-Bonvoy-7Jan26_Front2.png",1],
+ ["Mandiri Traveloka","traveloka-mandiri","Traveloka-New-Depan.png"],
+ ["Mandiri SKYZ","skyz-card","skyz-t01-contactless.png",1]]},
+{id:"automotives",n:"Otomotif",d:"Untuk kenyamanan berkendara: upgrade pembelian BBM, perlindungan asuransi, dan 2x Fiestapoin untuk transaksi di SPBU Pertamina.",c:[
+ ["Mandiri Kartu Kredit Ducati Official Club Indonesia","mandiri-kartu-kredit-ducati-official-club-indonesia","banner-faq/Slider-CPM/Elta/DOCI-Card-4Jul2025_Front-1.png"],
+ ["Mandiri Kartu Kredit HOG Kalimas Solo","mandiri-kartu-kredit-hog-kalimas-solo","2025/maret/prod-hog/37780af3-4b86-4824-9bbf-e4da4e2931ae.jpg"],
+ ["Mandiri MyPertamina Card","mypertaminacard","2024/product-MyPertamina/MyPertamina-Front.png",1],
+ ["Mandiri HOG Indomobil Jakarta Chapter Card","hog-indomobil-jakarta-chapter","2024/sept/product/HOG-Jkt/HOG-SIGNATURE_Front.png"]]},
+{id:"golf",n:"Golf",d:"Khusus penggemar golf: akses fasilitas golf terbaik dan rangkaian turnamen golf yang diselenggarakan Bank Mandiri.",c:[
+ ["Mandiri Golf Signature","golf-signature","page/golf-signature-contactless.png"],
+ ["Mandiri Golf Platinum","golf-platinum","page/golf-platinum-contactless.png"]]},
+{id:"lifestyle",n:"Lifestyle",d:"Kebutuhan sehari-hari dengan kartu Regular. Kumpulkan Fiestapoin dan tukarkan dengan penawaran maskapai, retail, restoran, hotel, hingga tempat rekreasi.",c:[
+ ["Mandiri Platinum","mandiri-platinum","redesign-kartu/Visa-Platinum-Front.png",1],
+ ["Mandiri JCB Precious","jcb","jcb-white.png",1],
+ ["Mandiri Plus Card","plus","Plus-Card-front-BG-Product.jpg",1],
+ ["Mandiri Fengshui Card","fengshui","kartu/fengshui-front.png",1],
+ ["Mandiri Lippo Malls Card","lippo-malls","2024/Juli/lippo-malls/Lippo-Malls-Card-445x279px-Front.png",1],
+ ["Mandiri Kartu Kredit Shopee","mandiri-cobrand-shopee","shopee-contactless_1.png",1]]},
+{id:"virtual",n:"Kartu Virtual",d:"Kartu kredit virtual tanpa kartu fisik untuk berbagai kebutuhan, gratis iuran tahunan selamanya.",c:[
+ ["Kartu Kredit Indonesia","kartu-kredit-indonesia","KKI-MKK-Front-1.png"],
+ ["Mandiri Livin’ Everyday","mandiri-livin-everyday","fiestapoin/untung-terus/new-0906/fix-mandiri-kartu-kredit-livin-everyday_front.png"]]},
+{id:"world-elite",n:"World Elite",d:"Level tertinggi kartu kredit Bank Mandiri, eksklusif untuk nasabah Private Banking (total dana kelolaan ≥ Rp20 miliar).",c:[
+ ["Mandiri World Elite Heritage","mandiri-world-elite-heritage","GANANG/HERITAGE/MetalCard-Front-Product-Page-jpg.jpg"],
+ ["Mandiri Prioritas","prioritas","redesign-kartu/Mastercard-Prioritas-Front.png"],
+ ["Mandiri World Elite","world-elite","world-elite-contactless.png"]]},
+{id:"corporate",n:"Corporate",d:"Untuk kebutuhan transaksi dan perjalanan bisnis perusahaan, dengan kemudahan mengontrol setiap transaksi pegawai.",c:[
+ ["Kartu Kredit Pemerintah","kartu-kredit-pemerintah","redesign-kartu/Visa-KKP-Platinum-Front.png"],
+ ["Mandiri SME Card","smecard","redesign-kartu/Mastercard-SME-Front.png"],
+ ["Mandiri Corporate Card","corporate","redesign-kartu/Visa-Corporate-Platinum-Front.png"],
+ ["Kartu Kredit Indonesia Pemerintah","kartu-kredit-pemerintah-domestik","welcome-pack/kartu-kredit-pemerintah-domestik/standar-desain-kkp-domestik_front.png"]]},
+{id:"kartu-design-khusus",n:"Design Khusus",d:"Kartu spesial hasil kolaborasi eksklusif Bank Mandiri.",c:[
+ ["Mandiri Signature Alumni Pangudi Luhur","mandiri-signature-alumni-pangudi-luhur","IKAPL-Frontweb.png"],
+ ["Mandiri Signature Alumni Kanisius","mandiri-signature-alumni-kanisius","GANANG/ICON/Kanisius-Card-Front-Product-Page.png"],
+ ["Mandiri Duta Bio Energi Card","mandiri-duta-bio-energi-card","DUTA-BIO-ENERGI/Duta-Bio-Energi-Card-front.png"],
+ ["Mandiri Signature Buttonscarves","mandiri-kartu-kredit-buttonscarves","Buttonscarves-Front-445x279px-1.jpg"],
+ ["Mandiri Tzu Chi Card","mandiri-buddha-tzu-chi","2024/november/MandirikkreditBuddhaTzuChi24Ok2024BENNY_Front.png"]]}
+];
+var KS={cat:"all",q:""};
+function kkEsc(t){return String(t).replace(/[&<>"]/g,function(m){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]})}
+function kkRender(){
+ $("kk-tabs").innerHTML=[{id:"all",n:"Semua"}].concat(KK).map(function(g){return'<button type="button" class="q'+(KS.cat==g.id?" on":"")+'" data-c="'+g.id+'" role="tab" aria-selected="'+(KS.cat==g.id)+'">'+g.n+'</button>'}).join("");
+ var cur=KK.filter(function(g){return g.id==KS.cat})[0];
+ $("kk-cat").innerHTML=cur?"<p><b>"+cur.n+":</b> "+kkEsc(cur.d)+"</p>":"";
+ var q=KS.q.toLowerCase(),h="";
+ KK.forEach(function(g){if(KS.cat!="all"&&g.id!=KS.cat)return;
+  g.c.forEach(function(c){if(q&&(c[0]+" "+g.n).toLowerCase().indexOf(q)<0)return;
+   h+='<article class="kc"><div class="im"><img loading="lazy" referrerpolicy="no-referrer" alt="'+kkEsc(c[0])+'" src="'+KI+c[2]+'" onerror="this.style.display=\'none\'"></div><div class="bd"><span class="tag" style="align-self:flex-start">'+g.n+'</span><h3>'+kkEsc(c[0])+'</h3><div class="bt"><a class="btn o" target="_blank" rel="noopener" href="'+KB+'produk/'+c[1]+'">Info lengkap</a>'+(c[3]?'<a class="btn" target="_blank" rel="noopener" href="'+KB+'apply-kartu-kredit?card='+c[1]+'">Ajukan</a>':"")+'</div></div></article>'})});
+ $("kk-grid").innerHTML=h||'<div class="kk-empty" style="grid-column:1/-1">Kartu tidak ditemukan.</div>'}
+$("kk-tabs").onclick=function(e){var b=e.target.closest("[data-c]");if(!b)return;KS.cat=b.dataset.c;kkRender()};
+$("kk-s").oninput=function(){KS.q=this.value.trim();kkRender()};
+kkRender();
+
+/* ---- kontak ---- */
+$("dc").innerHTML=["kur","kum","kpr","ksm"].map(function(k){var c=PIC[k];return'<div class="ct"><div class="pic"><div class="av">'+c.n[0]+'</div><div class="t"><span>'+k.toUpperCase()+'</span><b>'+c.n+'</b><span style="font-size:14px;color:var(--navy)">'+c.t+'</span></div><a class="btn" target="_blank" rel="noopener" href="https://wa.me/'+c.wa+'">WhatsApp</a></div></div>'}).join("")+'<p class="legal">MITA WhatsApp 08118414000 | Mandiri Call 14000<br>www.bankmandiri.co.id</p>';
+$("hub").onclick=function(){$("dlg").showModal()};
+$("dlg").onclick=function(e){if(e.target===this)this.close()};
+
+/* ---- router ---- */
+var NM={ksm:"KSM",class1:"Class 1",class2:"Class 2",class3:"Class 3",class4:"Class 4",class5:"Class 5",kpr:"KPR",reguler:"KPR dan Multiguna",livin:"Program Livin’ KPR",nonlivin:"Eligible Livin’ Non Livin’",premiere:"Kategori Premiere",takeover:"Take Over dan Top Up","kartu-kredit":"Kartu Kredit",kur:"KUR",kum:"KUM",brosur:"Brosur",sim:"Simulasi"};
+function route(){if(/^#\/?kpr\/?$/.test(location.hash)){location.replace("#/kpr/reguler");return}var p=location.hash.replace(/^#\/?/,"").split("/").filter(Boolean),id="v-"+(p.join("-")||"home");
+ if(!$(id)){id="v-home";p=[]}
+ document.querySelectorAll(".v").forEach(function(x){x.classList.toggle("on",x.id==id)});
+ var h='<a href="#/">Beranda</a>',acc="";p.forEach(function(x,i){acc+="/"+x;if(x=="kpr"&&i<p.length-1)return;h+=" › "+(i<p.length-1?'<a href="#'+acc+'">'+NM[x]+"</a>":"<span>"+NM[x]+"</span>")});
+ $("bc").innerHTML=p.length?h:"";
+ if(p[p.length-1]=="sim"&&UPD[p[p.length-2]])UPD[p[p.length-2]]();
+ document.title=(p.length?p.map(function(x){return NM[x]}).join(" – ")+" | ":"")+"KUR, KUM, KPR, KSM & Kartu Kredit Bank Mandiri";
+ window.scrollTo(0,0)}
+addEventListener("hashchange",route);route();
+</script>
+</body>
+</html>
